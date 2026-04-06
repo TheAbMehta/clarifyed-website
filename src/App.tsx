@@ -388,83 +388,92 @@ export default function App() {
           <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[#1a1a1a] to-transparent z-10"></div>
         </section>
 
-        {/* Beyond Insight */}
-        <section id="platform" ref={beyondInsightRef} className="py-40 px-6 text-center relative overflow-hidden">
+        {/* Beyond Chatbots */}
+        <section id="platform" ref={beyondInsightRef} className="py-28 md:py-40 px-6 text-center relative overflow-hidden">
           {/* Parallax Dotted Backgrounds */}
           <div className="absolute inset-0 pointer-events-none flex items-center justify-center">
-            <motion.div 
+            <motion.div
               className="absolute inset-[-50%] opacity-[0.03]"
               style={{ backgroundImage: 'radial-gradient(circle, #ffffff 2px, transparent 2px)', backgroundSize: '32px 32px', y: dotsY1 }}
             />
-            <motion.div 
+            <motion.div
               className="absolute inset-[-50%] opacity-[0.04]"
               style={{ backgroundImage: 'radial-gradient(circle, #ffffff 1.5px, transparent 1.5px)', backgroundSize: '48px 48px', y: dotsY2 }}
             />
-            <motion.div 
+            <motion.div
               className="absolute inset-[-50%] opacity-[0.05]"
               style={{ backgroundImage: 'radial-gradient(circle, #e8705b 1px, transparent 1px)', backgroundSize: '64px 64px', y: dotsY3 }}
             />
-            {/* Gradient mask to fade out edges */}
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,#1a1a1a_70%)]" />
           </div>
 
           <div className="relative z-10 max-w-5xl mx-auto">
-            <div className="flex flex-col items-center justify-center gap-8 mb-24">
-              <motion.div style={{ y: beyondInsightY1 }} className="grid grid-cols-11 gap-3 opacity-30">
-                 {Array.from({length: 33}).map((_, i) => (
-                   <div key={i} className={`w-1.5 h-1.5 rounded-full ${i === 16 ? 'bg-[#e8705b] opacity-100 scale-150 shadow-[0_0_10px_#e8705b]' : 'bg-white'}`}></div>
-                 ))}
+            {/* Heading area */}
+            <div className="flex flex-col items-center justify-center gap-6 mb-8">
+              <motion.div style={{ y: beyondInsightY1 }} className="grid grid-cols-15 gap-2.5 opacity-40">
+                {Array.from({length: 45}).map((_, i) => (
+                  <div key={i} className={`w-2 h-2 rounded-full ${i === 22 ? 'bg-[#e8705b] opacity-100 scale-150 shadow-[0_0_12px_#e8705b]' : 'bg-white'}`}></div>
+                ))}
               </motion.div>
-              
-              <h2 className="text-3xl sm:text-5xl md:text-7xl font-medium flex items-center justify-center gap-4 sm:gap-6 flex-wrap">
-                Beyond Chatbots. <span className="w-8 h-8 rounded-full bg-[#e8705b] inline-block shadow-[0_0_20px_#e8705b]"></span> Into Real Learning.
+
+              <h2 className="text-3xl sm:text-5xl md:text-7xl font-medium leading-[1.15] tracking-tight">
+                <span className="block">Beyond Chatbots<span className="text-[#e8705b]">.</span></span>
+                <span className="inline-flex items-center gap-3 sm:gap-4 md:gap-5 mt-1">
+                  <span className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 rounded-full bg-[#e8705b] inline-block shadow-[0_0_20px_#e8705b] shrink-0"></span>
+                  Into Real Learning<span className="text-[#e8705b]">.</span>
+                </span>
               </h2>
 
-              <motion.div style={{ y: beyondInsightY2 }} className="grid grid-cols-11 gap-3 opacity-30">
-                 {Array.from({length: 33}).map((_, i) => (
-                   <div key={i} className="w-1.5 h-1.5 rounded-full bg-white"></div>
-                 ))}
+              <motion.div style={{ y: beyondInsightY2 }} className="grid grid-cols-15 gap-2.5 opacity-40">
+                {Array.from({length: 45}).map((_, i) => (
+                  <div key={i} className="w-2 h-2 rounded-full bg-white"></div>
+                ))}
               </motion.div>
             </div>
 
+            {/* Subtext */}
+            <p className="text-lg md:text-xl text-[#a3a3a3] max-w-2xl mx-auto mb-16 leading-relaxed">
+              Imagine the best teacher you ever had, standing at a whiteboard, teaching you one-on-one. Now put that on a screen. That's Clarifyed.
+            </p>
+
             {/* Desktop: overlapping circles */}
             <div className="hidden md:flex justify-center items-center mb-12 relative h-64">
-               <motion.button
-                 onClick={() => setActiveCircle(activeCircle === 'whiteboard' ? null : 'whiteboard')}
-                 initial={{ opacity: 0, x: -50 }}
-                 whileInView={{ opacity: 1, x: -128 }}
-                 transition={{ duration: 0.8, ease: "easeOut" }}
-                 viewport={{ once: true }}
-                 aria-pressed={activeCircle === 'whiteboard'}
-                 aria-label="Learn about the Whiteboard feature"
-                 className={`absolute w-64 h-64 rounded-full border flex items-center justify-center transition-all duration-300 cursor-pointer focus-visible:outline-2 focus-visible:outline-[#e8705b] focus-visible:outline-offset-2 ${activeCircle === 'whiteboard' ? 'border-[#e8705b] bg-[#e8705b]/10 z-20 scale-105' : 'border-[#e8705b]/50 hover:border-[#e8705b] hover:bg-[#e8705b]/5 z-0'}`}
-               >
-                  <span className="text-[#e8705b] text-xl font-medium">Whiteboard</span>
-               </motion.button>
-               <motion.button
-                 onClick={() => setActiveCircle(activeCircle === 'knowledge' ? null : 'knowledge')}
-                 initial={{ opacity: 0, scale: 0.8 }}
-                 whileInView={{ opacity: 1, scale: 1 }}
-                 transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-                 viewport={{ once: true }}
-                 aria-pressed={activeCircle === 'knowledge'}
-                 aria-label="Learn about the Knowledge Graph feature"
-                 className={`absolute w-64 h-64 rounded-full border flex items-center justify-center backdrop-blur-sm transition-all duration-300 cursor-pointer focus-visible:outline-2 focus-visible:outline-[#e8705b] focus-visible:outline-offset-2 ${activeCircle === 'knowledge' ? 'border-[#e8705b] bg-[#e8705b]/20 z-20 scale-105' : 'border-[#e8705b]/50 bg-[#1a1a1a]/40 hover:border-[#e8705b] hover:bg-[#1a1a1a]/60 z-10'}`}
-               >
-                  <span className="text-[#e8705b] text-xl font-medium">Knowledge Graph</span>
-               </motion.button>
-               <motion.button
-                 onClick={() => setActiveCircle(activeCircle === 'collaboration' ? null : 'collaboration')}
-                 initial={{ opacity: 0, x: 50 }}
-                 whileInView={{ opacity: 1, x: 128 }}
-                 transition={{ duration: 0.8, ease: "easeOut" }}
-                 viewport={{ once: true }}
-                 aria-pressed={activeCircle === 'collaboration'}
-                 aria-label="Learn about the Collaboration feature"
-                 className={`absolute w-64 h-64 rounded-full border flex items-center justify-center transition-all duration-300 cursor-pointer focus-visible:outline-2 focus-visible:outline-[#e8705b] focus-visible:outline-offset-2 ${activeCircle === 'collaboration' ? 'border-[#e8705b] bg-[#e8705b]/10 z-20 scale-105' : 'border-[#e8705b]/50 hover:border-[#e8705b] hover:bg-[#e8705b]/5 z-0'}`}
-               >
-                  <span className="text-[#e8705b] text-xl font-medium">Collaboration</span>
-               </motion.button>
+              <motion.button
+                onClick={() => setActiveCircle(activeCircle === 'whiteboard' ? null : 'whiteboard')}
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: -128 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                viewport={{ once: true }}
+                aria-pressed={activeCircle === 'whiteboard'}
+                aria-label="Learn about the Whiteboard feature"
+                className={`absolute w-64 h-64 rounded-full border flex items-center justify-center transition-all duration-300 cursor-pointer focus-visible:outline-2 focus-visible:outline-[#e8705b] focus-visible:outline-offset-2 ${activeCircle === 'whiteboard' ? 'border-[#e8705b] bg-[#e8705b]/10 z-20 scale-105' : 'border-[#e8705b]/50 hover:border-[#e8705b] hover:bg-[#e8705b]/5 z-0'}`}
+              >
+                <span className="text-[#e8705b] text-xl font-medium">Whiteboard</span>
+              </motion.button>
+              <motion.button
+                onClick={() => setActiveCircle(activeCircle === 'knowledge' ? null : 'knowledge')}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+                viewport={{ once: true }}
+                aria-pressed={activeCircle === 'knowledge'}
+                aria-label="Learn about the Knowledge Graph feature"
+                className={`absolute w-64 h-64 rounded-full border flex items-center justify-center backdrop-blur-sm transition-all duration-300 cursor-pointer focus-visible:outline-2 focus-visible:outline-[#e8705b] focus-visible:outline-offset-2 ${activeCircle === 'knowledge' ? 'border-[#e8705b] bg-[#e8705b]/20 z-20 scale-105' : 'border-[#e8705b]/50 bg-[#1a1a1a]/40 hover:border-[#e8705b] hover:bg-[#1a1a1a]/60 z-10'}`}
+              >
+                <span className="text-[#e8705b] text-xl font-medium">Knowledge Graph</span>
+              </motion.button>
+              <motion.button
+                onClick={() => setActiveCircle(activeCircle === 'collaboration' ? null : 'collaboration')}
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 128 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                viewport={{ once: true }}
+                aria-pressed={activeCircle === 'collaboration'}
+                aria-label="Learn about the Collaboration feature"
+                className={`absolute w-64 h-64 rounded-full border flex items-center justify-center transition-all duration-300 cursor-pointer focus-visible:outline-2 focus-visible:outline-[#e8705b] focus-visible:outline-offset-2 ${activeCircle === 'collaboration' ? 'border-[#e8705b] bg-[#e8705b]/10 z-20 scale-105' : 'border-[#e8705b]/50 hover:border-[#e8705b] hover:bg-[#e8705b]/5 z-0'}`}
+              >
+                <span className="text-[#e8705b] text-xl font-medium">Collaboration</span>
+              </motion.button>
             </div>
 
             {/* Mobile: stacked cards */}
@@ -479,7 +488,7 @@ export default function App() {
                   aria-pressed={activeCircle === key}
                   className={`w-full p-6 rounded-2xl border text-left transition-all duration-300 ${activeCircle === key ? 'border-[#e8705b] bg-[#e8705b]/10' : 'border-[#e8705b]/30 bg-white/5'}`}
                 >
-                  <span className="text-[#e8705b] text-lg font-medium capitalize">{key === 'knowledge' ? 'Knowledge Graph' : key.charAt(0).toUpperCase() + key.slice(1)}</span>
+                  <span className="text-[#e8705b] text-lg font-medium">{key === 'knowledge' ? 'Knowledge Graph' : key.charAt(0).toUpperCase() + key.slice(1)}</span>
                   <AnimatePresence>
                     {activeCircle === key && (
                       <motion.p
@@ -496,10 +505,11 @@ export default function App() {
               ))}
             </div>
 
+            {/* Description panel */}
             <div className="hidden md:flex h-32 mb-12 items-center justify-center">
               <AnimatePresence mode="wait">
                 {activeCircle ? (
-                  <motion.p 
+                  <motion.p
                     key={activeCircle}
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -509,14 +519,14 @@ export default function App() {
                     {circleInfo[activeCircle]}
                   </motion.p>
                 ) : (
-                  <motion.p 
+                  <motion.p
                     key="default"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="text-2xl text-[#a3a3a3] max-w-4xl mx-auto leading-relaxed"
+                    className="text-xl text-[#a3a3a3] max-w-3xl mx-auto leading-relaxed"
                   >
-                    Imagine the best teacher you ever had, standing at a whiteboard, teaching you one-on-one. Now put that on a screen. That's Clarifyed.
+                    Click a circle to explore how Clarifyed's three pillars work together to create a learning experience no chatbot can match.
                   </motion.p>
                 )}
               </AnimatePresence>
