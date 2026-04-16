@@ -67,7 +67,7 @@ export default function ClarifyedFeatures() {
             <div className="absolute left-0 z-50 h-full w-20 bg-linear-to-r from-[#1a1a1a]" />
             <div className="absolute right-0 z-50 h-full w-20 bg-linear-to-l from-[#1a1a1a]" />
 
-            <div className="-mx-6 flex w-screen flex-col md:-mx-10 lg:-mx-16">
+            <div className="-mx-6 flex w-full flex-col md:-mx-10 lg:-mx-16">
               <Marquee className="[--duration:45s] [--gap:0.75rem]" repeat={4}>
                 {m1.map((q) => (
                   <Badge

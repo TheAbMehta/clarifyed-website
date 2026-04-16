@@ -41,44 +41,8 @@ export default function Platform() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,#1a1a1a_70%)]" />
       </div>
 
-      <div className="relative z-10 max-w-5xl mx-auto">
-        <div className="flex flex-col items-center justify-center gap-6 mb-8">
-          {/* Top Animated Element: AI Sine Wave */}
-          <div className="flex gap-2 justify-center items-center h-12 opacity-80 mb-2">
-            {[...Array(9)].map((_, i) => (
-              <motion.div
-                key={i}
-                className={`w-1.5 rounded-full ${i === 4 ? 'bg-[#e8705b] shadow-[0_0_12px_#e8705b]' : 'bg-white/60'}`}
-                animate={{ height: ["8px", "32px", "8px"] }}
-                transition={{
-                  duration: 1.5,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: Math.abs(i - 4) * 0.15 // Creates a wave from the center
-                }}
-              />
-            ))}
-          </div>
+      <div className="relative z-10 max-w-5xl mx-auto pt-20">
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium leading-[1.15] tracking-tight flex flex-wrap items-center justify-center gap-3 sm:gap-4 md:gap-5 my-4">
-            <span>Beyond Chatbots</span>
-            <span className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 rounded-full bg-[#e8705b] inline-block shadow-[0_0_20px_#e8705b] shrink-0"></span>
-            <span>Into Real Learning</span>
-          </h2>
-
-          {/* Bottom Animated Element: Knowledge Beam */}
-          <div className="relative w-64 h-px mx-auto mt-6 bg-white/10 overflow-hidden">
-            <motion.div
-              className="absolute top-0 bottom-0 w-1/3 bg-gradient-to-r from-transparent via-[#e8705b] to-transparent shadow-[0_0_10px_#e8705b]"
-              animate={{ left: ["-33%", "100%"] }}
-              transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-            />
-          </div>
-        </div>
-
-        <p className="text-lg md:text-xl text-[#a3a3a3] max-w-2xl mx-auto mb-16 leading-relaxed">
-          Imagine the best teacher you ever had, standing at a whiteboard, teaching you one-on-one. Now put that on a screen. That's Clarifyed.
-        </p>
 
         <div className="hidden md:flex justify-center items-center mb-12 relative h-64">
           <motion.button

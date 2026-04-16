@@ -10,7 +10,7 @@ interface MarqueeProps extends React.HTMLAttributes<HTMLDivElement> {
 
 export const Marquee = ({
   className,
-  repeat = 4,
+  repeat = 6,
   reverse,
   children,
   ...props
@@ -29,7 +29,7 @@ export const Marquee = ({
           <div
             key={i}
             className={cn(
-              "flex shrink-0 justify-around [gap:var(--gap)] animate-marquee",
+              "flex shrink-0 min-w-fit [gap:var(--gap)] animate-marquee",
               reverse ? "[animation-direction:reverse]" : "normal"
             )}
           >
