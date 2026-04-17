@@ -9,9 +9,8 @@ type Person = {
   bio: string;
   linkedin: string;
   discord: string;
-  contactHref: string;
-  contactLabel: string;
-  contactKind: 'site' | 'email';
+  website: string;
+  email: string;
 };
 
 export default function Team() {
@@ -23,9 +22,8 @@ export default function Team() {
       bio: "Architecting the AI teaching engine and knowledge graph infrastructure that powers personalized whiteboard tutoring.",
       linkedin: "https://linkedin.com/in/vyomie",
       discord: "vyomnothere",
-      contactHref: "https://www.vyxm.in",
-      contactLabel: "vyxm.in",
-      contactKind: "site",
+      website: "https://www.vyxm.in",
+      email: "vyom@teenage.works",
     },
     {
       name: "Abhisar Mehta",
@@ -34,9 +32,8 @@ export default function Team() {
       bio: "Building the production ML systems that deliver real-time AI tutoring at scale across thousands of concurrent sessions.",
       linkedin: "https://linkedin.com/in/theabmehta",
       discord: "abmehta",
-      contactHref: "mailto:abhisar@teenage.works",
-      contactLabel: "abhisar@teenage.works",
-      contactKind: "email",
+      website: "https://abmehta.com",
+      email: "abhisar@teenage.works",
     },
   ];
 
@@ -87,13 +84,11 @@ export default function Team() {
                 <a href={person.linkedin} target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/10 transition-colors" aria-label={`${person.name} on LinkedIn`}>
                   <Linkedin className="w-4 h-4" />
                 </a>
-                <a
-                  href={person.contactHref}
-                  {...(person.contactKind === 'site' ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-                  className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/10 transition-colors"
-                  aria-label={person.contactKind === 'email' ? `Email ${person.name}` : `${person.name}'s website`}
-                >
-                  {person.contactKind === 'email' ? <Mail className="w-4 h-4" /> : <Globe className="w-4 h-4" />}
+                <a href={person.website} target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/10 transition-colors" aria-label={`${person.name}'s website`}>
+                  <Globe className="w-4 h-4" />
+                </a>
+                <a href={`mailto:${person.email}`} className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/10 transition-colors" aria-label={`Email ${person.name}`}>
+                  <Mail className="w-4 h-4" />
                 </a>
               </div>
               <p className="text-center text-xs text-[#a3a3a3] mt-4">
