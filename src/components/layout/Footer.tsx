@@ -1,6 +1,13 @@
 import React, { useState } from 'react';
-import { Linkedin, Twitter, Facebook, Instagram, Youtube, ArrowRight } from 'lucide-react';
+import { Linkedin, Instagram, Youtube, ArrowRight } from 'lucide-react';
 import emailjs from '@emailjs/browser';
+
+// X (formerly Twitter) brand mark — lucide does not ship this glyph.
+const XIcon = ({ className }: { className?: string }) => (
+  <svg viewBox="0 0 24 24" className={className} fill="currentColor" aria-hidden="true">
+    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+  </svg>
+);
 
 export default function Footer() {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
@@ -51,16 +58,16 @@ export default function Footer() {
               Whiteboard-native AI tutoring.<br/>Real learning, delivered stroke by stroke.
             </p>
             <div className="flex gap-4 mt-2">
-              <a href="#" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-white hover:text-black hover:border-white transition-all duration-300 text-white/70">
+              <a href="https://www.linkedin.com/company/teenageworks?originalSubdomain=in" target="_blank" rel="noopener noreferrer" aria-label="Teenage Works on LinkedIn" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-white hover:text-black hover:border-white transition-all duration-300 text-white/70">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="#" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-white hover:text-black hover:border-white transition-all duration-300 text-white/70">
-                <Twitter className="w-5 h-5" />
+              <a href="https://x.com/teenage_works" target="_blank" rel="noopener noreferrer" aria-label="Teenage Works on X" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-white hover:text-black hover:border-white transition-all duration-300 text-white/70">
+                <XIcon className="w-[18px] h-[18px]" />
               </a>
-              <a href="#" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-white hover:text-black hover:border-white transition-all duration-300 text-white/70">
+              <a href="https://instagram.com/clarifyed.ai" target="_blank" rel="noopener noreferrer" aria-label="Clarifyed on Instagram" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-white hover:text-black hover:border-white transition-all duration-300 text-white/70">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-white hover:text-black hover:border-white transition-all duration-300 text-white/70">
+              <a href="https://www.youtube.com/@TeenageWorks" target="_blank" rel="noopener noreferrer" aria-label="Teenage Works on YouTube" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-white hover:text-black hover:border-white transition-all duration-300 text-white/70">
                 <Youtube className="w-5 h-5" />
               </a>
             </div>
@@ -129,7 +136,17 @@ export default function Footer() {
             )}
           </div>
           
-          <div className="flex flex-col md:items-end gap-2 text-sm text-[#a3a3a3]">
+          <div className="flex flex-col md:items-end gap-3 text-sm text-[#a3a3a3]">
+            <a
+              href="https://teenage.works/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 opacity-80 hover:opacity-100 transition-opacity"
+              aria-label="A product of Teenage Works"
+            >
+              <span className="text-xs uppercase tracking-wider text-[#a3a3a3]">A product of</span>
+              <img src={`${import.meta.env.BASE_URL}tw_logo.png`} alt="Teenage Works" className="h-7 w-auto" />
+            </a>
             <p>© 2026 Teenage Works Private Limited.</p>
             <p>All rights reserved.</p>
           </div>
