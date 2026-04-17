@@ -1,8 +1,45 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Linkedin, Twitter } from 'lucide-react';
+import { Linkedin, Globe, Mail } from 'lucide-react';
+
+type Person = {
+  name: string;
+  role: string;
+  image: string;
+  bio: string;
+  linkedin: string;
+  discord: string;
+  contactHref: string;
+  contactLabel: string;
+  contactKind: 'site' | 'email';
+};
 
 export default function Team() {
+  const team: Person[] = [
+    {
+      name: "Vyom Nishant Patel",
+      role: "ML Pipeline Lead & R&D Lead",
+      image: `${import.meta.env.BASE_URL}team_vyom.jpg`,
+      bio: "Architecting the AI teaching engine and knowledge graph infrastructure that powers personalized whiteboard tutoring.",
+      linkedin: "https://linkedin.com/in/vyomie",
+      discord: "vyomnothere",
+      contactHref: "https://www.vyxm.in",
+      contactLabel: "vyxm.in",
+      contactKind: "site",
+    },
+    {
+      name: "Abhisar Mehta",
+      role: "ML Pipeline Engineer & Lead of Production Systems",
+      image: `${import.meta.env.BASE_URL}team_abhisar.jpg`,
+      bio: "Building the production ML systems that deliver real-time AI tutoring at scale across thousands of concurrent sessions.",
+      linkedin: "https://linkedin.com/in/theabmehta",
+      discord: "abmehta",
+      contactHref: "mailto:abhisar@teenage.works",
+      contactLabel: "abhisar@teenage.works",
+      contactKind: "email",
+    },
+  ];
+
   return (
     <section className="pt-16 pb-32 px-6 bg-[#1a1a1a]">
       <div className="max-w-7xl mx-auto">
@@ -20,20 +57,7 @@ export default function Team() {
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {[
-            {
-              name: "Vyom Nishant Patel",
-              role: "ML Pipeline Lead & R&D Lead",
-              image: `${import.meta.env.BASE_URL}team_vyom.jpg`,
-              bio: "Architecting the AI teaching engine and knowledge graph infrastructure that powers personalized whiteboard tutoring."
-            },
-            {
-              name: "Abhisar Mehta",
-              role: "ML Pipeline Engineer & Lead of Production Systems",
-              image: `${import.meta.env.BASE_URL}team_abhisar.jpg`,
-              bio: "Building the production ML systems that deliver real-time AI tutoring at scale across thousands of concurrent sessions."
-            }
-          ].map((person, i) => (
+          {team.map((person, i) => (
             <motion.div
               key={person.name}
               initial={{ opacity: 0, y: 40 }}
@@ -60,13 +84,21 @@ export default function Team() {
               </div>
 
               <div className="flex justify-center gap-3 mt-6">
-                <a href="#" className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/10 transition-colors" aria-label={`${person.name} LinkedIn`}>
+                <a href={person.linkedin} target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/10 transition-colors" aria-label={`${person.name} on LinkedIn`}>
                   <Linkedin className="w-4 h-4" />
                 </a>
-                <a href="#" className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/10 transition-colors" aria-label={`${person.name} Twitter`}>
-                  <Twitter className="w-4 h-4" />
+                <a
+                  href={person.contactHref}
+                  {...(person.contactKind === 'site' ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                  className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/10 transition-colors"
+                  aria-label={person.contactKind === 'email' ? `Email ${person.name}` : `${person.name}'s website`}
+                >
+                  {person.contactKind === 'email' ? <Mail className="w-4 h-4" /> : <Globe className="w-4 h-4" />}
                 </a>
               </div>
+              <p className="text-center text-xs text-[#a3a3a3] mt-4">
+                Discord: <span className="text-white font-medium">{person.discord}</span>
+              </p>
             </motion.div>
           ))}
         </div>

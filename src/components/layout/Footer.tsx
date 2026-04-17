@@ -91,9 +91,7 @@ export default function Footer() {
             <div className="col-span-2 sm:col-span-1">
               <h4 className="text-sm font-semibold tracking-wider text-white uppercase mb-8 opacity-90">Company</h4>
               <ul className="space-y-5 text-[#a3a3a3]">
-                <li><a href="#company" className="hover:text-white hover:translate-x-1 block transition-all">About Us</a></li>
-                <li><a href="#company" className="hover:text-white hover:translate-x-1 block transition-all">Careers</a></li>
-                <li><a href="#company" className="hover:text-white hover:translate-x-1 block transition-all">Partners</a></li>
+                <li><a href="https://teenage.works/#team" target="_blank" rel="noopener noreferrer" className="hover:text-white hover:translate-x-1 block transition-all">About Us</a></li>
                 <li><a href="#privacy-policy" className="hover:text-white hover:translate-x-1 block transition-all">Privacy Policy</a></li>
                 <li><a href="#terms" className="hover:text-white hover:translate-x-1 block transition-all">Terms</a></li>
               </ul>

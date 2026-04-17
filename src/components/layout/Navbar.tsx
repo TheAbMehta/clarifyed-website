@@ -60,8 +60,7 @@ export default function Navbar() {
             </nav>
 
             <div className="flex items-center gap-3">
-              <button className="hidden md:block px-4 py-1.5 rounded-full text-sm border border-[#e8705b] text-[#e8705b] hover:bg-[#e8705b]/10 transition-all focus-visible:outline-2 focus-visible:outline-[#e8705b] focus-visible:outline-offset-2">Sign in</button>
-              <a href="#contact" className="hidden md:block px-4 py-1.5 rounded-full text-sm bg-[#e8705b] text-white font-medium hover:bg-[#d6604d] transition-all focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2">Try Clarifyed</a>
+              <a href="https://alpha.clarifyed.ai/" target="_blank" rel="noopener noreferrer" className="hidden md:block px-4 py-1.5 rounded-full text-sm bg-[#e8705b] text-white font-medium hover:bg-[#d6604d] transition-all focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2">Try Clarifyed</a>
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 className="md:hidden w-10 h-10 flex items-center justify-center rounded-full hover:bg-white/10 transition-colors focus-visible:outline-2 focus-visible:outline-[#e8705b] focus-visible:outline-offset-2"
@@ -90,8 +89,7 @@ export default function Navbar() {
               <a href="#pricing" onClick={() => setMobileMenuOpen(false)} className="text-2xl font-medium text-white/90 hover:text-white transition-colors">Pricing</a>
             </nav>
             <div className="flex flex-col gap-3">
-              <button className="w-full py-3 rounded-full text-lg border border-white/20 hover:bg-white/10 transition-all">Sign in</button>
-              <a href="#contact" onClick={() => setMobileMenuOpen(false)} className="w-full py-3 rounded-full text-lg bg-[#e8705b] text-white font-medium hover:bg-[#d6604d] transition-all text-center">Try Clarifyed</a>
+              <a href="https://alpha.clarifyed.ai/" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="w-full py-3 rounded-full text-lg bg-[#e8705b] text-white font-medium hover:bg-[#d6604d] transition-all text-center">Try Clarifyed</a>
             </div>
           </motion.div>
         )}

@@ -117,9 +117,9 @@ export default function CTA() {
         <p className="text-xl text-[#1a1a1a]/80 max-w-2xl mx-auto mb-6 md:mb-8">
           The best teacher you ever had, available anytime. Start learning on the whiteboard today.
         </p>
-        <button className="px-8 py-4 rounded-full text-lg bg-[#9ca3af] text-[#1a1a1a] font-medium hover:bg-[#8b929e] transition-colors cursor-pointer relative z-30">
+        <a href="https://alpha.clarifyed.ai/" target="_blank" rel="noopener noreferrer" className="inline-block px-8 py-4 rounded-full text-lg bg-[#9ca3af] text-[#1a1a1a] font-medium hover:bg-[#8b929e] transition-colors cursor-pointer relative z-30">
           Get Started
-        </button>
+        </a>
       </div>
       
       {/* 3D Gravity well graphic - strictly constrained inside remaining flex space */}

@@ -41,8 +41,10 @@ export default function Hero() {
         </motion.p>
         
         <motion.div variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }} className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a 
-            href="#contact"
+          <a
+            href="https://alpha.clarifyed.ai/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-full sm:w-auto px-8 py-4 rounded-full text-lg bg-[#e8705b] text-white font-medium hover:bg-[#d6604d] transition-all hover:scale-105 active:scale-95 shadow-[0_0_40px_-10px_#e8705b]"
           >
             Try Clarifyed
