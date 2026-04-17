@@ -7,15 +7,15 @@ export default function Pricing() {
   const [isAnnual, setIsAnnual] = useState(true);
 
   return (
-    <section id="pricing" className="pt-16 pb-32 px-6 relative overflow-hidden bg-[#1a1a1a]">
+    <section id="pricing" className="pt-12 sm:pt-16 pb-20 sm:pb-32 px-6 relative overflow-hidden bg-[#1a1a1a]">
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-20">
+        <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-20">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-4xl md:text-6xl font-medium tracking-tight mb-6"
+            className="text-3xl sm:text-4xl md:text-6xl font-medium tracking-tight mb-4 sm:mb-6"
           >
             Pricing that <span className="text-[#a3a3a3]"><RandomUnderline strokeWidth={10}>adapts.</RandomUnderline></span>
           </motion.h2>
@@ -25,7 +25,7 @@ export default function Pricing() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-xl text-[#a3a3a3] leading-relaxed"
+            className="text-base sm:text-xl text-[#a3a3a3] leading-relaxed"
           >
             Start learning today on the full Socratic whiteboard. Upgrade when you need richer modalities faster.
           </motion.p>
@@ -65,7 +65,7 @@ export default function Pricing() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="bg-white/5 border border-white/10 rounded-[2.5rem] p-10 h-full relative group transition-colors hover:border-white/20"
+            className="bg-white/5 border border-white/10 rounded-[2rem] sm:rounded-[2.5rem] p-6 sm:p-10 h-full relative group transition-colors hover:border-white/20"
           >
             <div className="mb-8">
               <h3 className="text-2xl font-medium mb-2 text-white">Starter</h3>
@@ -104,7 +104,7 @@ export default function Pricing() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="bg-gradient-to-b from-[#1a1a1a] to-[#221815] border border-[#e8705b]/40 rounded-[2.5rem] p-10 h-[105%] relative group shadow-xl"
+            className="bg-gradient-to-b from-[#1a1a1a] to-[#221815] border border-[#e8705b]/40 rounded-[2rem] sm:rounded-[2.5rem] p-6 sm:p-10 h-full md:h-[105%] relative group shadow-xl"
           >
             {/* Minimal inner border effect instead of glow */}
             <div className="absolute inset-0 rounded-[2.5rem] border border-[#e8705b]/10 pointer-events-none" />

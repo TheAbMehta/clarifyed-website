@@ -49,13 +49,15 @@ export default function Navbar() {
           className="w-full px-6 flex items-center justify-between max-w-7xl mx-auto overflow-visible"
         >
           <div className="flex items-center gap-2">
-            <img src={`${import.meta.env.BASE_URL}clarifyed_temp_logo.png`} alt="Clarifyed Logo" className="h-8 w-auto" />
+            <a href="#/" aria-label="Clarifyed home" className="flex items-center">
+              <img src={`${import.meta.env.BASE_URL}Clarifyed_New_logo.png`} alt="Clarifyed" className="h-7 w-auto" />
+            </a>
           </div>
 
           <div className="flex items-center gap-6">
             <nav className="hidden md:flex items-center bg-white/5 rounded-full p-1 border border-white/10">
               <a href="#platform" className="px-4 py-1.5 rounded-full text-sm text-white/80 hover:text-white transition-all"><RandomUnderline>How it works</RandomUnderline></a>
-              <a href="#roles" className="px-4 py-1.5 rounded-full text-sm text-white/80 hover:text-white transition-all"><RandomUnderline>For students</RandomUnderline></a>
+              <a href="#features" className="px-4 py-1.5 rounded-full text-sm text-white/80 hover:text-white transition-all"><RandomUnderline>Features</RandomUnderline></a>
               <a href="#pricing" className="px-4 py-1.5 rounded-full text-sm text-white/80 hover:text-white transition-all"><RandomUnderline>Pricing</RandomUnderline></a>
             </nav>
 
@@ -85,7 +87,7 @@ export default function Navbar() {
           >
             <nav className="flex flex-col gap-6 mb-10">
               <a href="#platform" onClick={() => setMobileMenuOpen(false)} className="text-2xl font-medium text-white/90 hover:text-white transition-colors">How it works</a>
-              <a href="#roles" onClick={() => setMobileMenuOpen(false)} className="text-2xl font-medium text-white/90 hover:text-white transition-colors">For students</a>
+              <a href="#features" onClick={() => setMobileMenuOpen(false)} className="text-2xl font-medium text-white/90 hover:text-white transition-colors">Features</a>
               <a href="#pricing" onClick={() => setMobileMenuOpen(false)} className="text-2xl font-medium text-white/90 hover:text-white transition-colors">Pricing</a>
             </nav>
             <div className="flex flex-col gap-3">

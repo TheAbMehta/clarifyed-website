@@ -43,14 +43,14 @@ export default function VideoDemos() {
   }, [activeVideo]);
 
   return (
-    <section id="resources" className="py-32 px-6 bg-[#111] overflow-hidden">
+    <section id="resources" className="py-20 sm:py-32 px-6 bg-[#111] overflow-hidden">
       <div className="max-w-5xl mx-auto">
         {/* Search bar with typewriter prompt */}
-        <div className="relative max-w-lg mx-auto mb-20">
+        <div className="relative max-w-lg mx-auto mb-12 sm:mb-20">
           <Search className="absolute left-5 top-1/2 -translate-y-1/2 w-5 h-5 text-[#666]" />
           <div
             aria-live="polite"
-            className="w-full bg-[#1a1a1a] border border-white/10 rounded-2xl pl-14 pr-6 py-4 text-[#888] text-lg font-mono min-h-[3.5rem] flex items-center whitespace-pre"
+            className="w-full bg-[#1a1a1a] border border-white/10 rounded-2xl pl-12 sm:pl-14 pr-4 sm:pr-6 py-3 sm:py-4 text-[#888] text-base sm:text-lg font-mono min-h-[3rem] sm:min-h-[3.5rem] flex items-center whitespace-pre overflow-hidden"
           >
             {typedPrompt}
             <span className="ml-[2px] inline-block w-[2px] h-5 bg-[#888] animate-pulse align-middle" />
@@ -58,7 +58,7 @@ export default function VideoDemos() {
         </div>
 
         {/* Stacked cards container */}
-        <div className="relative flex items-center justify-center" style={{ minHeight: '500px' }}>
+        <div className="relative flex items-center justify-center min-h-[320px] sm:min-h-[420px] md:min-h-[500px]">
           {/* Background stacked cards — fanned behind */}
           {videoDemos.map((video, i) => {
             const offset = i - activeVideo;
@@ -132,7 +132,7 @@ export default function VideoDemos() {
         </div>
 
         {/* Navigation below */}
-        <div className="flex items-center justify-center gap-6 mt-12">
+        <div className="flex items-center justify-center gap-4 sm:gap-6 mt-8 sm:mt-12">
           <button
             onClick={() => setActiveVideo((prev) => (prev - 1 + videoDemos.length) % videoDemos.length)}
             aria-label="Previous demo"

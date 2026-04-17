@@ -13,10 +13,10 @@ export default function CaseStudy() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-5xl md:text-7xl font-medium text-[#1a1a1a] leading-tight mb-6">
+            <h2 className="text-3xl sm:text-5xl md:text-7xl font-medium text-[#1a1a1a] leading-tight mb-4 sm:mb-6">
               From struggling<br/>with calculus to<br/>mastering it
             </h2>
-            <p className="text-xl text-[#1a1a1a]/70 mb-10 max-w-lg">
+            <p className="text-lg sm:text-xl text-[#1a1a1a]/70 mb-8 sm:mb-10 max-w-lg">
               Greenwood Academy deployed Clarifyed across their math department — unlocking personalized tutoring for every student and transforming learning outcomes.
             </p>
             <div className="flex items-center gap-8 text-[#1a1a1a]">
@@ -29,7 +29,7 @@ export default function CaseStudy() {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="h-[400px] rounded-tl-[10rem] rounded-br-[10rem] overflow-hidden"
+            className="h-[240px] sm:h-[320px] md:h-[400px] rounded-tl-[5rem] rounded-br-[5rem] sm:rounded-tl-[8rem] sm:rounded-br-[8rem] md:rounded-tl-[10rem] md:rounded-br-[10rem] overflow-hidden"
           >
             <motion.img 
               whileHover={{ scale: 1.05 }}

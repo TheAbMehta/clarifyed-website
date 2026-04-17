@@ -50,7 +50,35 @@ export default function ThinkDifferent() {
   });
 
   return (
-    <section ref={thinkDifferentRef} className="h-[400vh] relative bg-[#1a1a1a]">
+    <>
+      {/* Mobile: simple vertical stack — the desktop SVG/pinned layout is too cramped below md */}
+      <section className="md:hidden relative bg-[#1a1a1a] py-20 px-6">
+        <div className="max-w-xl mx-auto text-center mb-12">
+          <h2 className="text-5xl sm:text-6xl font-medium tracking-tight text-white leading-[1.02]">Think Different.</h2>
+          <h2 className="text-3xl sm:text-5xl font-medium tracking-tight text-neutral-500 leading-[1.02] mt-2">We Already Built It.</h2>
+        </div>
+
+        <ol className="max-w-xl mx-auto space-y-5">
+          {layersData.map((layer) => (
+            <motion.li
+              key={`td-mobile-${layer.id}`}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-10%" }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              className="relative rounded-2xl border border-white/10 bg-white/[0.03] pl-6 pr-5 py-6"
+            >
+              <span className="absolute left-0 top-6 bottom-6 w-[3px] bg-gradient-to-b from-[#3b82f6] to-[#06b6d4] rounded-full" aria-hidden="true" />
+              <p className="text-xs uppercase tracking-[0.2em] text-[#3b82f6] font-semibold mb-2">Step {layer.id}</p>
+              <h3 className="text-2xl font-semibold text-white mb-2">{layer.title}</h3>
+              <p className="text-neutral-400 leading-relaxed">{layer.desc}</p>
+            </motion.li>
+          ))}
+        </ol>
+      </section>
+
+      {/* Desktop: original pinned 400vh isometric cube sequence — unchanged */}
+      <section ref={thinkDifferentRef} className="hidden md:block h-[400vh] relative bg-[#1a1a1a]">
       {/* Sticky Container rendering perfectly at all scroll heights */}
       <div className="sticky top-0 h-screen overflow-hidden flex items-center justify-center p-4">
         
@@ -174,6 +202,7 @@ export default function ThinkDifferent() {
         {/* Global Dark Gradient Fade to hide hard bottom edges cleanly and shallow without obscuring lowest text blocks*/}
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#1a1a1a] to-transparent pointer-events-none z-10" />
       </div>
-    </section>
+      </section>
+    </>
   );
 }

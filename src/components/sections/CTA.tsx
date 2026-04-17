@@ -111,10 +111,10 @@ export default function CTA() {
       </div>
 
       <div ref={contentRef} className="relative z-20 pt-16 md:pt-24 text-center w-full px-6 opacity-0 flex-none">
-        <h2 className="text-5xl md:text-7xl font-medium text-[#1a1a1a] mb-4">
+        <h2 className="text-4xl sm:text-5xl md:text-7xl font-medium text-[#1a1a1a] mb-3 sm:mb-4">
           Built to fit today.<br/>Ready for tomorrow.
         </h2>
-        <p className="text-xl text-[#1a1a1a]/80 max-w-2xl mx-auto mb-6 md:mb-8">
+        <p className="text-base sm:text-xl text-[#1a1a1a]/80 max-w-2xl mx-auto mb-6 md:mb-8">
           The best teacher you ever had, available anytime. Start learning on the whiteboard today.
         </p>
         <a href="https://alpha.clarifyed.ai/" target="_blank" rel="noopener noreferrer" className="inline-block px-8 py-4 rounded-full text-lg bg-[#9ca3af] text-[#1a1a1a] font-medium hover:bg-[#8b929e] transition-colors cursor-pointer relative z-30">

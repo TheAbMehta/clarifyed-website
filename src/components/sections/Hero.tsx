@@ -5,7 +5,7 @@ import RandomUnderline from './RandomUnderline';
 
 export default function Hero() {
   return (
-    <section className="relative pb-40 px-6 text-center max-w-7xl mx-auto overflow-hidden">
+    <section className="relative pb-24 sm:pb-40 px-6 text-center max-w-7xl mx-auto overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay pointer-events-none"></div>
 
@@ -26,7 +26,7 @@ export default function Hero() {
         
         <motion.h1
           variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
-          className="text-5xl sm:text-7xl md:text-8xl font-medium tracking-tighter leading-[1.02] mb-8 text-[#f4f4f0]"
+          className="text-4xl sm:text-6xl md:text-8xl font-medium tracking-tighter leading-[1.02] mb-6 sm:mb-8 text-[#f4f4f0]"
         >
           Learn on a{' '}
           <RandomUnderline strokeWidth={14}>
@@ -36,7 +36,7 @@ export default function Hero() {
           <span className="text-[#a3a3a3]">Not in a chat.</span>
         </motion.h1>
 
-        <motion.p variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }} className="text-lg md:text-xl text-[#a3a3a3] max-w-xl mx-auto mb-12 leading-relaxed font-light">
+        <motion.p variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }} className="text-base sm:text-lg md:text-xl text-[#a3a3a3] max-w-xl mx-auto mb-10 sm:mb-12 leading-relaxed font-light">
           The AI writes the lesson on the board, hands you the pen, and corrects you mid-stroke when you go wrong.
         </motion.p>
         

@@ -3,8 +3,8 @@ import { motion } from 'motion/react';
 
 export default function Assessment() {
   return (
-    <section className="grid md:grid-cols-2 min-h-[600px]">
-      <div className="bg-[#e8705b] relative overflow-hidden flex items-center justify-center p-12">
+    <section className="grid md:grid-cols-2 min-h-[500px] md:min-h-[600px]">
+      <div className="bg-[#e8705b] relative overflow-hidden flex items-center justify-center p-8 sm:p-12">
          {/* Complex wireframe graphic */}
          <motion.svg 
            animate={{ rotate: 360 }}
@@ -18,11 +18,11 @@ export default function Assessment() {
            <circle cx="280" cy="200" r="8" fill="#10b981" />
          </motion.svg>
       </div>
-      <div className="bg-[#9ca3af] p-16 md:p-24 flex flex-col justify-center">
-        <h2 className="text-5xl md:text-6xl font-medium text-[#1a1a1a] mb-8 leading-tight">
+      <div className="bg-[#9ca3af] p-8 sm:p-16 md:p-24 flex flex-col justify-center">
+        <h2 className="text-4xl sm:text-5xl md:text-6xl font-medium text-[#1a1a1a] mb-6 sm:mb-8 leading-tight">
           Assessment That<br/>Truly Understands
         </h2>
-        <p className="text-xl text-[#1a1a1a]/80 max-w-md leading-relaxed">
+        <p className="text-lg sm:text-xl text-[#1a1a1a]/80 max-w-md leading-relaxed">
           100% coverage of every concept. Real-time misconception detection. Spaced repetition woven naturally into every lesson — no flashcard decks needed.
         </p>
       </div>

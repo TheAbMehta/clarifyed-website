@@ -65,7 +65,7 @@ export default function LogoCloud() {
         <motion.div
           animate={{ x: ['0%', '-50%'] }}
           transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
-          className="flex items-center gap-20 px-10 grayscale opacity-60"
+          className="flex items-center gap-10 md:gap-20 px-6 md:px-10 grayscale opacity-60"
         >
           {/* Repeat the set enough times so the -50% loop remains seamless even with only 3 logos */}
           <LogoSet />
@@ -78,8 +78,8 @@ export default function LogoCloud() {
       </div>
 
       {/* Edge fades */}
-      <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[#1a1a1a] to-transparent z-10 pointer-events-none"></div>
-      <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[#1a1a1a] to-transparent z-10 pointer-events-none"></div>
+      <div className="absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-[#1a1a1a] to-transparent z-10 pointer-events-none"></div>
+      <div className="absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-[#1a1a1a] to-transparent z-10 pointer-events-none"></div>
     </section>
   );
 }

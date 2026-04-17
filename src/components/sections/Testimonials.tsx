@@ -7,10 +7,10 @@ export default function Testimonials() {
 
   const testimonials = [
     {
-      quote: "It feels like having the best tutor in the world sitting right next to me. The AI writes on the whiteboard, draws diagrams, and when I get stuck, it corrects me mid-step. Nothing else comes close.",
-      name: "Priya Sharma",
-      title: "12th Grade Student, Delhi",
-      image: "https://i.pravatar.cc/150?img=47"
+      quote: "Clarifyed is like having a second brain. It learned every unique formula I derived and every niche technique I practiced. When I got stuck during a mock exam, it would instantly recall the exact method we built together to solve it. It's the ultimate competitive partner.",
+      name: "Rishi Perumal",
+      title: "JEE Aspirant",
+      image: "https://i.pravatar.cc/150?img=15"
     },
     {
       quote: "The knowledge graph is a game-changer. I can see exactly where each student's gaps are, what misconceptions they hold, and what they mastered weeks ago. It's like having X-ray vision into learning.",
@@ -19,10 +19,10 @@ export default function Testimonials() {
       image: "https://i.pravatar.cc/150?img=11"
     },
     {
-      quote: "My daughter went from dreading math to asking for extra sessions. The whiteboard approach feels natural to her — she picks up the pen and solves alongside the AI. Her confidence has completely transformed.",
-      name: "Meera Kapoor",
-      title: "Parent of a 10th Grader",
-      image: "https://i.pravatar.cc/150?img=32"
+      quote: "It's really silly and I enjoyed the answers it gave, they were easy to understand.",
+      name: "Veda Pigilam",
+      title: "Student",
+      image: "https://i.pravatar.cc/150?img=45"
     }
   ];
 
@@ -42,12 +42,12 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="py-32 px-6 max-w-7xl mx-auto grid md:grid-cols-2 gap-16">
+    <section className="py-20 sm:py-32 px-6 max-w-7xl mx-auto grid md:grid-cols-2 gap-12 md:gap-16">
       <div className="flex flex-col justify-between">
         <h2 className="text-3xl sm:text-5xl md:text-7xl font-medium leading-tight text-[#f4f4f0]/90">
           Loved by the<br/>learners who<br/>lead the way
         </h2>
-        <div className="flex items-center gap-4 mt-16">
+        <div className="flex items-center gap-3 sm:gap-4 mt-10 md:mt-16">
           <button
             onClick={prevTestimonial}
             aria-label="Previous testimonial"
@@ -74,7 +74,7 @@ export default function Testimonials() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col justify-center relative min-h-[400px]">
+      <div className="flex flex-col justify-center relative min-h-[300px] md:min-h-[400px]">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentTestimonial}

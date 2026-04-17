@@ -74,17 +74,7 @@ export default function Footer() {
           </div>
 
           {/* Links Cols */}
-          <div className="col-span-12 md:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-12">
-            <div>
-              <h4 className="text-sm font-semibold tracking-wider text-white uppercase mb-8 opacity-90">Platform</h4>
-              <ul className="space-y-5 text-[#a3a3a3]">
-                <li><a href="#roles" className="hover:text-white hover:translate-x-1 block transition-all">For Students</a></li>
-                <li><a href="#roles" className="hover:text-white hover:translate-x-1 block transition-all">For Teachers</a></li>
-                <li><a href="#roles" className="hover:text-white hover:translate-x-1 block transition-all">For Schools</a></li>
-                <li><a href="#roles" className="hover:text-white hover:translate-x-1 block transition-all">For Parents</a></li>
-              </ul>
-            </div>
-
+          <div className="col-span-12 md:col-span-7 grid grid-cols-2 gap-12">
             <div>
               <h4 className="text-sm font-semibold tracking-wider text-white uppercase mb-8 opacity-90">Resources</h4>
               <ul className="space-y-5 text-[#a3a3a3]">
@@ -95,12 +85,12 @@ export default function Footer() {
               </ul>
             </div>
 
-            <div className="col-span-2 sm:col-span-1">
+            <div>
               <h4 className="text-sm font-semibold tracking-wider text-white uppercase mb-8 opacity-90">Company</h4>
               <ul className="space-y-5 text-[#a3a3a3]">
                 <li><a href="https://teenage.works/#team" target="_blank" rel="noopener noreferrer" className="hover:text-white hover:translate-x-1 block transition-all">About Us</a></li>
-                <li><a href="#privacy-policy" className="hover:text-white hover:translate-x-1 block transition-all">Privacy Policy</a></li>
-                <li><a href="#terms" className="hover:text-white hover:translate-x-1 block transition-all">Terms</a></li>
+                <li><a href="#/privacy-policy" className="hover:text-white hover:translate-x-1 block transition-all">Privacy Policy</a></li>
+                <li><a href="#/terms" className="hover:text-white hover:translate-x-1 block transition-all">Terms</a></li>
               </ul>
             </div>
           </div>
@@ -115,20 +105,24 @@ export default function Footer() {
               <p className="text-[#8ebf9e] text-lg font-medium mt-4">Thanks! You're on the list.</p>
             ) : (
               <form onSubmit={handleEmailSubmit} className="relative mt-4">
-                <input 
-                  type="email" 
-                  required 
-                  placeholder="Enter your email address" 
-                  disabled={emailLoading} 
-                  className="w-full bg-white/5 border border-white/10 rounded-full pl-6 pr-32 py-4 text-white focus:outline-none focus:border-[#e8705b]/50 focus:bg-white/10 transition-all disabled:opacity-50" 
+                <input
+                  type="email"
+                  required
+                  placeholder="Enter your email address"
+                  disabled={emailLoading}
+                  className="w-full bg-white/5 border border-white/10 rounded-full pl-5 pr-14 sm:pl-6 sm:pr-32 py-4 text-white focus:outline-none focus:border-[#e8705b]/50 focus:bg-white/10 transition-all disabled:opacity-50"
                 />
-                <button 
-                  type="submit" 
-                  disabled={emailLoading} 
-                  className="absolute right-1.5 top-1.5 bottom-1.5 bg-[#e8705b] hover:bg-[#d6604d] text-white px-6 rounded-full font-medium transition-all flex items-center justify-center gap-2 disabled:opacity-50"
+                <button
+                  type="submit"
+                  disabled={emailLoading}
+                  aria-label="Subscribe"
+                  className="absolute right-1.5 top-1.5 bottom-1.5 bg-[#e8705b] hover:bg-[#d6604d] text-white px-4 sm:px-6 rounded-full font-medium transition-all flex items-center justify-center gap-2 disabled:opacity-50"
                 >
                   {emailLoading ? '...' : (
-                    <>Subscribe <ArrowRight className="w-4 h-4 ml-1 -mr-1" /></>
+                    <>
+                      <span className="hidden sm:inline">Subscribe</span>
+                      <ArrowRight className="w-4 h-4 sm:ml-1 sm:-mr-1" />
+                    </>
                   )}
                 </button>
                 {emailError && <p className="text-[#e8705b] text-sm mt-3 absolute -bottom-6 left-4">{emailError}</p>}
