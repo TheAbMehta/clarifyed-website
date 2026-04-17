@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 
@@ -25,6 +25,13 @@ export default function Testimonials() {
       image: "https://i.pravatar.cc/150?img=32"
     }
   ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [testimonials.length]);
 
   const nextTestimonial = () => {
     setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
@@ -89,12 +96,6 @@ export default function Testimonials() {
             </div>
           </motion.div>
         </AnimatePresence>
-        
-        <div className="mt-16 opacity-10 overflow-hidden h-24">
-          <p className="text-2xl leading-relaxed">
-            "{testimonials[(currentTestimonial + 1) % testimonials.length].quote.substring(0, 120)}..."
-          </p>
-        </div>
       </div>
     </section>
   );

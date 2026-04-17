@@ -43,31 +43,50 @@ export default function CTA() {
         "-=0.5"
       );
 
-      // 3. Fade in diagram container seamlessly
+      // 3. Fade in diagram container seamlessly (fixed opacity from 0.4 to 1)
       tl.fromTo(graphicsRef.current, 
         { opacity: 0 }, 
-        { opacity: 0.4, duration: 0.5 }, 
+        { opacity: 1, duration: 0.5 }, 
         "-=0.6"
       );
 
       // 4. Manually trigger gravity well object
-      // Use an empty object proxy to tween numeric progress
       const spiralData = { p: 0 };
       tl.to(spiralData, {
         p: 1.0,
-        duration: 3, 
+        duration: 5, // Extended duration to ensure scroll gives plenty of time to watch
         ease: "none",
         onUpdate: () => {
           const progress = Math.max(0, Math.min(1, spiralData.p));
-          const angle = progress * Math.PI * 10; // spiral 5 full rotations
+          // Spins faster as it approaches the center (conservation of angular momentum)
+          const angle = Math.pow(progress, 1.2) * Math.PI * 14; 
           
-          const radiusX = 550 * (1 - progress);
-          const radiusY = 180 * (1 - progress);
-          const dip = 2 * (1 - progress) * progress * 150;
+          const t = progress;
+          let radiusX, radiusY, cyCenter;
+
+          if (t <= 0.9) {
+            // Rolling along the grid surface
+            const ease = t * t * t; 
+            radiusX = 580 * (1 - t);
+            radiusY = 190 * (1 - t);
+            cyCenter = 250 + 200 * ease;
+          } else {
+            // Falling INSIDE the hole
+            const overshoot = (t - 0.9) / 0.1; // goes from 0 to 1 in final phase
+            const rimRx = 580 * 0.1;
+            const rimRy = 190 * 0.1;
+            const rimCy = 250 + 200 * Math.pow(0.9, 3);
+            
+            radiusX = rimRx * (1 - Math.pow(overshoot, 0.5)); // tightly loops inward
+            radiusY = rimRy * (1 - Math.pow(overshoot, 0.5));
+            cyCenter = rimCy + overshoot * 40; // dips further down the pipe
+          }
           
           const cx = 600 + radiusX * Math.cos(angle);
-          const cy = 250 + radiusY * Math.sin(angle) + dip;
-          const r = 20 * (1 - progress) + 3;
+          const cy = cyCenter + radiusY * Math.sin(angle);
+          
+          // Orb shrinks to zero gracefully
+          const r = Math.max(0, 16 * (1 - t));
 
           if (ballRef.current) {
             ballRef.current.setAttribute("cx", cx.toString());
@@ -75,7 +94,7 @@ export default function CTA() {
             ballRef.current.setAttribute("r", r.toString());
           }
         }
-      });
+      }, "-=0.2"); // Start animation right as the grid finishes fading in
     }, containerRef);
 
     return () => ctx.revert();
@@ -108,33 +127,42 @@ export default function CTA() {
         <svg viewBox="0 0 1200 550" fill="none" className="w-[120%] md:w-full h-full" preserveAspectRatio="xMidYMax meet">
           
           {/* Concentric ellipses plotting deep into the void */}
-          <ellipse cx="600" cy="250" rx="550" ry="180" stroke="#1a1a1a" strokeWidth="1" opacity="0.9" />
-          <ellipse cx="600" cy="250" rx="450" ry="145" stroke="#1a1a1a" strokeWidth="1" opacity="0.9" />
-          <ellipse cx="600" cy="250" rx="350" ry="110" stroke="#1a1a1a" strokeWidth="1" opacity="0.9" />
-          <ellipse cx="600" cy="250" rx="250" ry="75" stroke="#1a1a1a" strokeWidth="1" opacity="0.9" />
-          <ellipse cx="600" cy="250" rx="150" ry="40" stroke="#1a1a1a" strokeWidth="1" opacity="0.9" />
-          <ellipse cx="600" cy="250" rx="80" ry="18" stroke="#1a1a1a" strokeWidth="1" opacity="0.9" />
-          <ellipse cx="600" cy="250" rx="30" ry="5" stroke="#1a1a1a" strokeWidth="1" opacity="0.9" />
+          {Array.from({length: 10}).map((_, i) => {
+            const t = (i / 9) * 0.9; // Stops at t=0.9 to form the hole edge
+            const ease = t * t * t;
+            const rx = 580 * (1 - t);
+            const ry = 190 * (1 - t);
+            const cy = 250 + 200 * ease;
+            return (
+              <ellipse key={`ellipse-${i}`} cx="600" cy={cy} rx={rx} ry={ry} stroke="#050505" strokeWidth="1.5" opacity="0.95" fill="none" />
+            );
+          })}
 
           {/* Radial lines tracing the funnel descent into the pit */}
           {Array.from({length: 16}).map((_, i) => {
             const angle = (i * Math.PI) / 8;
-            const startX = 600 + 550 * Math.cos(angle);
-            const startY = 250 + 180 * Math.sin(angle);
-            const endX = 600 + 30 * Math.cos(angle);
-            const endY = 250 + 5 * Math.sin(angle);
-            
-            // Dramatic cpY push to create a powerful gravity drop
-            const cpX = 600 + 200 * Math.cos(angle);
-            const cpY = 250 + 100 * Math.sin(angle) + 180; 
-            
+            let d = "";
+            for (let j = 0; j <= 9; j++) {
+              const t = (j / 9) * 0.9;
+              const ease = t * t * t;
+              const rx = 580 * (1 - t);
+              const ry = 190 * (1 - t);
+              const cy = 250 + 200 * ease;
+              
+              const x = 600 + rx * Math.cos(angle);
+              const y = cy + ry * Math.sin(angle);
+              
+              if (j === 0) d += `M ${x} ${y} `;
+              else d += `L ${x} ${y} `;
+            }
             return (
               <path 
-                key={i} 
-                d={`M ${startX} ${startY} Q ${cpX} ${cpY} ${endX} ${endY}`} 
-                stroke="#1a1a1a" 
-                strokeWidth="1" 
-                opacity="0.8"
+                key={`radial-${i}`} 
+                d={d}
+                stroke="#050505" 
+                strokeWidth="1.5" 
+                opacity="0.95"
+                fill="none"
               />
             );
           })}

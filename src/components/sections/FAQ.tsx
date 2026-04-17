@@ -9,7 +9,6 @@ export default function FAQ() {
     { q: "How is Clarifyed different from ChatGPT or Khanmigo?", a: "Every AI tutor on the market is a chatbot — you type a question, it types back a paragraph. Clarifyed has no chat interface. The AI teaches on a multi-page whiteboard, writing notes stroke by stroke, drawing diagrams, embedding interactive widgets, and then handing the pen to the student." },
     { q: "What subjects does Clarifyed cover?", a: "Clarifyed works across all STEM subjects — mathematics, physics, chemistry, and biology. The whiteboard-native approach is especially powerful for subjects that require visual reasoning, diagrams, and step-by-step derivations." },
     { q: "Is my child's data private and secure?", a: "Absolutely. All student data, including knowledge graphs and session history, is encrypted and stored securely. We never sell student data to third parties. Parents and teachers have full visibility into what the AI teaches." },
-    { q: "Can teachers see student progress?", a: "Yes. Teachers get access to each student's persistent knowledge graph — showing exactly what topics they've mastered, where gaps exist, what misconceptions they hold, and when they last practiced each concept." },
     { q: "Is there a free plan?", a: "Yes. Free-tier students get the full Socratic whiteboard teaching experience with access to every tool. The AI adapts which modalities it uses based on what's most effective. Paid plans unlock richer experiences like AI-generated explainer videos and priority access." },
   ];
 

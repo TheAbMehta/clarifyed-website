@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Check, Sparkles, Zap, Video, Infinity } from 'lucide-react';
+import { Check, Zap, Video, Infinity } from 'lucide-react';
 import RandomUnderline from './RandomUnderline';
 
 export default function Pricing() {
@@ -10,17 +10,7 @@ export default function Pricing() {
     <section id="pricing" className="pt-16 pb-32 px-6 relative overflow-hidden bg-[#1a1a1a]">
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-20">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-[#a3a3a3] text-sm font-medium mb-6"
-          >
-            <Sparkles className="w-4 h-4 text-[#e8705b]" />
-            No Paywalls. Just Pure Learning.
-          </motion.div>
-          
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -78,8 +68,8 @@ export default function Pricing() {
             className="bg-white/5 border border-white/10 rounded-[2.5rem] p-10 h-full relative group transition-colors hover:border-white/20"
           >
             <div className="mb-8">
-              <h3 className="text-2xl font-medium mb-2 text-white">Starter Sandbox</h3>
-              <p className="text-[#a3a3a3] h-12">The full Socratic teaching experience. Forever free.</p>
+              <h3 className="text-2xl font-medium mb-2 text-white">Starter</h3>
+              <p className="text-[#a3a3a3] h-12">The whole Socratic whiteboard. Free, forever.</p>
               <div className="mt-8 flex items-end gap-2">
                 <span className="text-6xl font-medium tracking-tight text-white">$0</span>
                 <span className="text-[#a3a3a3] mb-2 font-medium">/ forever</span>
@@ -91,13 +81,15 @@ export default function Pricing() {
             </button>
 
             <ul className="space-y-5">
-              {[
-                "Full interactive Whiteboard canvas",
-                "Persistent Knowledge Graph tracking",
-                "Real-time stroke correction",
-                "Basic widget embedding (graphs, nodes)",
-                "Standard AI modality pacing"
-              ].map((feature, i) => (
+              {([
+                <>Full multi-page whiteboard canvas</>,
+                <>Stroke-by-stroke teaching &amp; real-time correction</>,
+                <><span className="text-white font-semibold">2</span> AI explainer videos per day</>,
+                <><span className="text-white font-semibold">5</span> AI-generated diagrams per day</>,
+                <>Collaborate with up to <span className="text-white font-semibold">3</span> friends per canvas</>,
+                <>Embedded Desmos, flashcards &amp; MCQ quizzes</>,
+                <>YouTube &amp; PDF integration</>,
+              ] as React.ReactNode[]).map((feature, i) => (
                 <li key={i} className="flex items-start gap-4 text-[#e0e0e0]">
                   <Check className="w-5 h-5 text-[#8ebf9e] shrink-0 mt-0.5" />
                   <span>{feature}</span>
@@ -124,17 +116,17 @@ export default function Pricing() {
 
             <div className="mb-8 relative z-10">
               <h3 className="text-2xl font-medium mb-2 text-[#e8705b]">Clarifyed Pro</h3>
-              <p className="text-[#a3a3a3] h-12">Unlocks the richest learning modalities, instantly.</p>
+              <p className="text-[#a3a3a3] h-12">An AI that reaches for richer modalities sooner.</p>
               <div className="mt-8 flex items-end gap-2">
                 <AnimatePresence mode="wait">
-                  <motion.span 
+                  <motion.span
                     key={isAnnual ? 'annual' : 'monthly'}
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
                     className="text-6xl font-medium tracking-tight text-white"
                   >
-                    ${isAnnual ? '15' : '19'}
+                    ${isAnnual ? '20' : '25'}
                   </motion.span>
                 </AnimatePresence>
                 <span className="text-[#a3a3a3] mb-2 font-medium">/ month{isAnnual && ', billed yearly'}</span>
@@ -149,13 +141,14 @@ export default function Pricing() {
             <div className="relative z-10">
               <p className="text-sm font-medium text-white mb-4">Everything in Starter, plus:</p>
               <ul className="space-y-5">
-                {[
-                  { text: "Unlimited Instant Video Generation", icon: <Video className="w-5 h-5 text-[#8ebf9e] shrink-0 mt-0.5" /> },
-                  { text: "Priority AI inference limits", icon: <Zap className="w-5 h-5 text-[#8ebf9e] shrink-0 mt-0.5" /> },
-                  { text: "Unlimited Collaboration Invites", icon: <Infinity className="w-5 h-5 text-[#8ebf9e] shrink-0 mt-0.5" /> },
-                  { text: "High-def PDF outputs & study guides", icon: <Check className="w-5 h-5 text-[#8ebf9e] shrink-0 mt-0.5" /> },
-                  { text: "Advanced 3D interactive widgets", icon: <Check className="w-5 h-5 text-[#8ebf9e] shrink-0 mt-0.5" /> }
-                ].map((feature, i) => (
+                {([
+                  { text: <><span className="text-[#e8705b] font-semibold">10</span> Manim-accurate explainer videos per day</>, icon: <Video className="w-5 h-5 text-[#e8705b] shrink-0 mt-0.5" /> },
+                  { text: <>Unlimited AI-generated visuals &amp; diffusion images</>, icon: <Infinity className="w-5 h-5 text-[#e8705b] shrink-0 mt-0.5" /> },
+                  { text: <>Unlimited collaborators per canvas</>, icon: <Infinity className="w-5 h-5 text-[#e8705b] shrink-0 mt-0.5" /> },
+                  { text: <>Real-time AI moderation in group meetings</>, icon: <Check className="w-5 h-5 text-[#e8705b] shrink-0 mt-0.5" /> },
+                  { text: <>Auto-generated textbook-quality session PDFs</>, icon: <Check className="w-5 h-5 text-[#e8705b] shrink-0 mt-0.5" /> },
+                  { text: <>Priority AI inference — the tutor reaches for richer modalities sooner</>, icon: <Zap className="w-5 h-5 text-[#e8705b] shrink-0 mt-0.5" /> },
+                ] as { text: React.ReactNode; icon: React.ReactNode }[]).map((feature, i) => (
                   <li key={i} className="flex items-start gap-4 text-white">
                     {feature.icon}
                     <span>{feature.text}</span>

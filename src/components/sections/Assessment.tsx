@@ -16,7 +16,6 @@ export default function Assessment() {
            ))}
            <circle cx="120" cy="150" r="8" fill="#3b82f6" />
            <circle cx="280" cy="200" r="8" fill="#10b981" />
-           <circle cx="220" cy="280" r="8" stroke="white" strokeWidth="2" strokeDasharray="2 2" />
          </motion.svg>
       </div>
       <div className="bg-[#9ca3af] p-16 md:p-24 flex flex-col justify-center">

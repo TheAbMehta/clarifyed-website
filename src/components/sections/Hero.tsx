@@ -7,7 +7,6 @@ export default function Hero() {
   return (
     <section className="relative pb-40 px-6 text-center max-w-7xl mx-auto overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#e8705b]/20 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay pointer-events-none"></div>
 
       {/* Main Content */}

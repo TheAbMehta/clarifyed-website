@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { Search, ArrowLeft, ArrowRight } from 'lucide-react';
 
 export default function VideoDemos() {
   const [activeVideo, setActiveVideo] = useState(0);
+  const [typedPrompt, setTypedPrompt] = useState('');
 
   const videoDemos = [
     { prompt: "Explain Nodes and Antinodes in standing wave", title: "AI Teaching on Whiteboard", description: "Watch the AI write notes and draw diagrams in real time", src: `${import.meta.env.BASE_URL}video1.mp4` },
@@ -14,18 +15,46 @@ export default function VideoDemos() {
     { prompt: "Explain Square Wave Harmonics", title: "Spaced Repetition Woven In", description: "Automatic review scheduling based on mastery", src: `${import.meta.env.BASE_URL}video6.mp4` },
   ];
 
+  // Typewriter: small initial pause, then ~75ms per character
+  useEffect(() => {
+    const fullPrompt = videoDemos[activeVideo].prompt;
+    setTypedPrompt('');
+    let typingId: number | undefined;
+    let i = 0;
+    const startId = window.setTimeout(() => {
+      typingId = window.setInterval(() => {
+        i++;
+        setTypedPrompt(fullPrompt.slice(0, i));
+        if (i >= fullPrompt.length && typingId !== undefined) window.clearInterval(typingId);
+      }, 75);
+    }, 400);
+    return () => {
+      window.clearTimeout(startId);
+      if (typingId !== undefined) window.clearInterval(typingId);
+    };
+  }, [activeVideo]);
+
+  // Auto-advance every 8 seconds (resets when user manually navigates)
+  useEffect(() => {
+    const id = window.setTimeout(() => {
+      setActiveVideo((prev) => (prev + 1) % videoDemos.length);
+    }, 8000);
+    return () => window.clearTimeout(id);
+  }, [activeVideo]);
+
   return (
     <section id="resources" className="py-32 px-6 bg-[#111] overflow-hidden">
       <div className="max-w-5xl mx-auto">
-        {/* Search bar */}
+        {/* Search bar with typewriter prompt */}
         <div className="relative max-w-lg mx-auto mb-20">
           <Search className="absolute left-5 top-1/2 -translate-y-1/2 w-5 h-5 text-[#666]" />
-          <input
-            type="text"
-            readOnly
-            value={videoDemos[activeVideo].prompt}
-            className="w-full bg-[#1a1a1a] border border-white/10 rounded-2xl pl-14 pr-6 py-4 text-[#888] text-lg focus:outline-none transition-colors font-mono cursor-default pointer-events-none"
-          />
+          <div
+            aria-live="polite"
+            className="w-full bg-[#1a1a1a] border border-white/10 rounded-2xl pl-14 pr-6 py-4 text-[#888] text-lg font-mono min-h-[3.5rem] flex items-center whitespace-pre"
+          >
+            {typedPrompt}
+            <span className="ml-[2px] inline-block w-[2px] h-5 bg-[#888] animate-pulse align-middle" />
+          </div>
         </div>
 
         {/* Stacked cards container */}
@@ -64,11 +93,13 @@ export default function VideoDemos() {
                     <video
                       key={`video-${i}`}
                       src={video.src}
-                      controls
                       autoPlay
                       muted
                       playsInline
-                      className="w-full h-full object-cover"
+                      disablePictureInPicture
+                      controlsList="nodownload noplaybackrate nofullscreen noremoteplayback"
+                      onContextMenu={(e) => e.preventDefault()}
+                      className="w-full h-full object-cover pointer-events-none select-none"
                       preload="metadata"
                     />
                   ) : (

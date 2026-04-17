@@ -2,33 +2,33 @@ import React, { useRef, useState } from 'react';
 import { motion, useScroll, useMotionValueEvent } from 'motion/react';
 
 const layersData = [
-  { 
-    id: 1, 
-    title: "Learn", 
-    desc: "The AI writes on the digital whiteboard — notes, diagrams, and equations, stroke by stroke.", 
-    cy: 420, 
-    textY: 300 
+  {
+    id: 1,
+    title: "Learn",
+    desc: "The AI writes on the digital whiteboard — notes, diagrams, and equations, stroke by stroke.",
+    cy: 450,
+    textY: 330
   },
-  { 
-    id: 2, 
-    title: "Adapt", 
-    desc: "A persistent knowledge graph tracks everything you master, adjusting difficulty in real time.", 
-    cy: 500, 
-    textY: 450 
+  {
+    id: 2,
+    title: "Adapt",
+    desc: "A persistent knowledge graph tracks everything you master, adjusting difficulty in real time.",
+    cy: 570,
+    textY: 470
   },
-  { 
-    id: 3, 
-    title: "Execute", 
-    desc: "Take the pen and solve directly on the canvas. The AI observes and corrects you mid-step.", 
-    cy: 580, 
-    textY: 600 
+  {
+    id: 3,
+    title: "Execute",
+    desc: "Take the pen and solve directly on the canvas. The AI observes and corrects you mid-step.",
+    cy: 690,
+    textY: 610
   },
-  { 
-    id: 4, 
-    title: "Collaborate", 
-    desc: "Invite friends and solve together while the smart AI mediates the group effortlessly.", 
-    cy: 660, 
-    textY: 750 
+  {
+    id: 4,
+    title: "Collaborate",
+    desc: "Invite friends and solve together while the smart AI mediates the group effortlessly.",
+    cy: 810,
+    textY: 750
   },
 ];
 
@@ -77,10 +77,10 @@ export default function ThinkDifferent() {
           </defs>
 
           {/* Title rendered logically inside the SVG canvas so it coordinates perfectly aligned scale and offsets naturally against elements independently of browser height. */}
-          <foreignObject x="0" y="80" width="1000" height="200">
+          <foreignObject x="0" y="30" width="1000" height="220">
             <div className="flex flex-col items-center justify-center w-full h-full text-center">
-              <h2 className="text-[72px] leading-tight text-white font-medium tracking-tight">Think Different.</h2>
-              <h2 className="text-[56px] leading-tight text-neutral-500 font-medium mt-2 tracking-tight">We Already Built It.</h2>
+              <h2 className="text-[104px] leading-[1.02] text-white font-medium tracking-tight">Think Different.</h2>
+              <h2 className="text-[76px] leading-[1.02] text-neutral-500 font-medium mt-3 tracking-tight">We Already Built It.</h2>
             </div>
           </foreignObject>
 
@@ -92,7 +92,7 @@ export default function ThinkDifferent() {
               <g key={`route-${layer.id}`}>
                 {/* Organic routing line from Isometric cube to the precise Text box height */}
                 <motion.path
-                  d={`M 410,${layer.cy} C 480,${layer.cy} 480,${layer.textY + 60} 550,${layer.textY + 60}`}
+                  d={`M 490,${layer.cy} C 520,${layer.cy} 520,${layer.textY + 60} 550,${layer.textY + 60}`}
                   fill="none"
                   stroke={isActive ? "#3b82f6" : "rgba(255,255,255,0.1)"}
                   strokeWidth={isActive ? 3 : 1}
@@ -127,19 +127,20 @@ export default function ThinkDifferent() {
             const isActive = tdStep === layer.id;
             
             // Core isometric math parameters
-            const W = 160;
-            const H = 80;
-            const TH = 20;
-            
+            const CX = 250;
+            const W = 240;
+            const H = 120;
+            const TH = 30;
+
             // Exact plot points
-            const pTop = `250,${layer.cy - H}`;
-            const pRightInner = `410,${layer.cy}`;
-            const pBottomInner = `250,${layer.cy + H}`;
-            const pLeftInner = `90,${layer.cy}`;
-            
-            const pRightOuter = `410,${layer.cy + TH}`;
-            const pBottomOuter = `250,${layer.cy + H + TH}`;
-            const pLeftOuter = `90,${layer.cy + TH}`;
+            const pTop = `${CX},${layer.cy - H}`;
+            const pRightInner = `${CX + W},${layer.cy}`;
+            const pBottomInner = `${CX},${layer.cy + H}`;
+            const pLeftInner = `${CX - W},${layer.cy}`;
+
+            const pRightOuter = `${CX + W},${layer.cy + TH}`;
+            const pBottomOuter = `${CX},${layer.cy + H + TH}`;
+            const pLeftOuter = `${CX - W},${layer.cy + TH}`;
             
             const topFace = `${pTop} ${pRightInner} ${pBottomInner} ${pLeftInner}`;
             const rightFace = `${pBottomInner} ${pRightInner} ${pRightOuter} ${pBottomOuter}`;
