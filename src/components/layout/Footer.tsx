@@ -81,7 +81,6 @@ export default function Footer() {
                 <li><a href="#resources" className="hover:text-white hover:translate-x-1 block transition-all">Blog</a></li>
                 <li><a href="#resources" className="hover:text-white hover:translate-x-1 block transition-all">Help Center</a></li>
                 <li><a href="#resources" className="hover:text-white hover:translate-x-1 block transition-all">Trust Center</a></li>
-                <li><a href="#pricing" className="hover:text-white hover:translate-x-1 block transition-all">Pricing</a></li>
               </ul>
             </div>
 

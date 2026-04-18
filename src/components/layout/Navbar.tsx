@@ -58,7 +58,6 @@ export default function Navbar() {
             <nav className="hidden md:flex items-center bg-white/5 rounded-full p-1 border border-white/10">
               <a href="#platform" className="px-4 py-1.5 rounded-full text-sm text-white/80 hover:text-white transition-all"><RandomUnderline>How it works</RandomUnderline></a>
               <a href="#features" className="px-4 py-1.5 rounded-full text-sm text-white/80 hover:text-white transition-all"><RandomUnderline>Features</RandomUnderline></a>
-              <a href="#pricing" className="px-4 py-1.5 rounded-full text-sm text-white/80 hover:text-white transition-all"><RandomUnderline>Pricing</RandomUnderline></a>
             </nav>
 
             <div className="flex items-center gap-3">
@@ -88,7 +87,6 @@ export default function Navbar() {
             <nav className="flex flex-col gap-6 mb-10">
               <a href="#platform" onClick={() => setMobileMenuOpen(false)} className="text-2xl font-medium text-white/90 hover:text-white transition-colors">How it works</a>
               <a href="#features" onClick={() => setMobileMenuOpen(false)} className="text-2xl font-medium text-white/90 hover:text-white transition-colors">Features</a>
-              <a href="#pricing" onClick={() => setMobileMenuOpen(false)} className="text-2xl font-medium text-white/90 hover:text-white transition-colors">Pricing</a>
             </nav>
             <div className="flex flex-col gap-3">
               <a href="https://alpha.clarifyed.ai/" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)} className="w-full py-3 rounded-full text-lg bg-[#e8705b] text-white font-medium hover:bg-[#d6604d] transition-all text-center">Try Clarifyed</a>

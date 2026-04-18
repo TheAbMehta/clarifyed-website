@@ -50,7 +50,7 @@ export default function VideoDemos() {
           <Search className="absolute left-5 top-1/2 -translate-y-1/2 w-5 h-5 text-[#666]" />
           <div
             aria-live="polite"
-            className="w-full bg-[#1a1a1a] border border-white/10 rounded-2xl pl-12 sm:pl-14 pr-4 sm:pr-6 py-3 sm:py-4 text-[#888] text-base sm:text-lg font-mono min-h-[3rem] sm:min-h-[3.5rem] flex items-center whitespace-pre overflow-hidden"
+            className="w-full bg-[#1a1a1a] border border-white/10 rounded-2xl pl-12 sm:pl-14 pr-4 sm:pr-6 py-3 sm:py-4 text-[#888] text-sm sm:text-base font-mono min-h-[3rem] sm:min-h-[3.5rem] flex items-center whitespace-pre overflow-hidden"
           >
             {typedPrompt}
             <span className="ml-[2px] inline-block w-[2px] h-5 bg-[#888] animate-pulse align-middle" />

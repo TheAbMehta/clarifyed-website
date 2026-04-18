@@ -1,0 +1,729 @@
+- generic [ref=e3]:
+  - link "Skip to content" [ref=e4] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e5]:
+    - generic [ref=e6]:
+      - link "Clarifyed home" [ref=e8] [cursor=pointer]:
+        - /url: "#/"
+        - img "Clarifyed" [ref=e9]
+      - button "Open menu" [ref=e12]:
+        - img [ref=e13]
+  - main [ref=e14]:
+    - generic [ref=e15]:
+      - generic [ref=e16]:
+        - generic [ref=e17]: Whiteboard-Native AI Tutoring
+        - heading "Learn on a whiteboard . Not in a chat." [level=1] [ref=e19]:
+          - text: Learn on a
+          - generic [ref=e21] [cursor=pointer]: whiteboard
+          - text: .
+          - text: Not in a chat.
+        - paragraph [ref=e22]: The AI writes the lesson on the board, hands you the pen, and corrects you mid-stroke when you go wrong.
+        - generic [ref=e23]:
+          - link "Try Clarifyed" [ref=e24] [cursor=pointer]:
+            - /url: https://alpha.clarifyed.ai/
+          - link "See How It Works" [ref=e25] [cursor=pointer]:
+            - /url: "#platform"
+      - img "Clarifyed whiteboard showing slope, tangent, derivative notes and Desmos graph" [ref=e27]
+    - generic [ref=e28]:
+      - paragraph [ref=e29]: Mentored by professionals from & featured at
+      - generic [ref=e31]:
+        - generic [ref=e32]:
+          - img [ref=e33]
+          - generic [ref=e36]: Product Hunt
+        - generic [ref=e37]:
+          - img [ref=e38]
+          - generic [ref=e41]: YC Startup School
+        - generic [ref=e42]:
+          - img "Physics Wallah" [ref=e43]
+          - generic [ref=e44]: Physics Wallah
+        - generic [ref=e45]:
+          - img [ref=e46]
+          - generic [ref=e49]: Product Hunt
+        - generic [ref=e50]:
+          - img [ref=e51]
+          - generic [ref=e54]: YC Startup School
+        - generic [ref=e55]:
+          - img "Physics Wallah" [ref=e56]
+          - generic [ref=e57]: Physics Wallah
+        - generic [ref=e58]:
+          - img [ref=e59]
+          - generic [ref=e62]: Product Hunt
+        - generic [ref=e63]:
+          - img [ref=e64]
+          - generic [ref=e67]: YC Startup School
+        - generic [ref=e68]:
+          - img "Physics Wallah" [ref=e69]
+          - generic [ref=e70]: Physics Wallah
+        - generic [ref=e71]:
+          - img [ref=e72]
+          - generic [ref=e75]: Product Hunt
+        - generic [ref=e76]:
+          - img [ref=e77]
+          - generic [ref=e80]: YC Startup School
+        - generic [ref=e81]:
+          - img "Physics Wallah" [ref=e82]
+          - generic [ref=e83]: Physics Wallah
+        - generic [ref=e84]:
+          - img [ref=e85]
+          - generic [ref=e88]: Product Hunt
+        - generic [ref=e89]:
+          - img [ref=e90]
+          - generic [ref=e93]: YC Startup School
+        - generic [ref=e94]:
+          - img "Physics Wallah" [ref=e95]
+          - generic [ref=e96]: Physics Wallah
+        - generic [ref=e97]:
+          - img [ref=e98]
+          - generic [ref=e101]: Product Hunt
+        - generic [ref=e102]:
+          - img [ref=e103]
+          - generic [ref=e106]: YC Startup School
+        - generic [ref=e107]:
+          - img "Physics Wallah" [ref=e108]
+          - generic [ref=e109]: Physics Wallah
+    - generic [ref=e111]:
+      - generic [ref=e112]:
+        - heading "Removing the roadblocks to your understanding" [level=2] [ref=e113]
+        - paragraph [ref=e114]: It's easy to get lost in a sea of generic chatbot answers. We filter out the noise, providing interactive, personalized, side-by-side tutoring that actually helps you learn.
+        - generic [ref=e116]:
+          - generic [ref=e118]:
+            - generic [ref=e119]:
+              - generic [ref=e120]: How do I balance this chemical equation?
+              - generic [ref=e121]: Why does the curve approach zero?
+              - generic [ref=e122]: Can you explain eigenvectors visually?
+              - generic [ref=e123]: What's the intuition behind this formula?
+              - generic [ref=e124]: How do I balance this chemical equation?
+              - generic [ref=e125]: Why does the curve approach zero?
+              - generic [ref=e126]: Can you explain eigenvectors visually?
+              - generic [ref=e127]: What's the intuition behind this formula?
+              - generic [ref=e128]: How do I balance this chemical equation?
+              - generic [ref=e129]: Why does the curve approach zero?
+              - generic [ref=e130]: Can you explain eigenvectors visually?
+              - generic [ref=e131]: What's the intuition behind this formula?
+              - generic [ref=e132]: How do I balance this chemical equation?
+              - generic [ref=e133]: Why does the curve approach zero?
+              - generic [ref=e134]: Can you explain eigenvectors visually?
+              - generic [ref=e135]: What's the intuition behind this formula?
+              - generic [ref=e136]: How do I balance this chemical equation?
+              - generic [ref=e137]: Why does the curve approach zero?
+              - generic [ref=e138]: Can you explain eigenvectors visually?
+              - generic [ref=e139]: What's the intuition behind this formula?
+            - generic [ref=e140]:
+              - generic [ref=e141]: How do I balance this chemical equation?
+              - generic [ref=e142]: Why does the curve approach zero?
+              - generic [ref=e143]: Can you explain eigenvectors visually?
+              - generic [ref=e144]: What's the intuition behind this formula?
+              - generic [ref=e145]: How do I balance this chemical equation?
+              - generic [ref=e146]: Why does the curve approach zero?
+              - generic [ref=e147]: Can you explain eigenvectors visually?
+              - generic [ref=e148]: What's the intuition behind this formula?
+              - generic [ref=e149]: How do I balance this chemical equation?
+              - generic [ref=e150]: Why does the curve approach zero?
+              - generic [ref=e151]: Can you explain eigenvectors visually?
+              - generic [ref=e152]: What's the intuition behind this formula?
+              - generic [ref=e153]: How do I balance this chemical equation?
+              - generic [ref=e154]: Why does the curve approach zero?
+              - generic [ref=e155]: Can you explain eigenvectors visually?
+              - generic [ref=e156]: What's the intuition behind this formula?
+              - generic [ref=e157]: How do I balance this chemical equation?
+              - generic [ref=e158]: Why does the curve approach zero?
+              - generic [ref=e159]: Can you explain eigenvectors visually?
+              - generic [ref=e160]: What's the intuition behind this formula?
+          - generic [ref=e162]:
+            - generic [ref=e163]:
+              - generic [ref=e164]: Show me the step-by-step derivation.
+              - generic [ref=e165]: Let's review what I missed last week.
+              - generic [ref=e166]: I don't understand projectile motion.
+              - generic [ref=e167]: Can we graph this function together?
+              - generic [ref=e168]: Show me the step-by-step derivation.
+              - generic [ref=e169]: Let's review what I missed last week.
+              - generic [ref=e170]: I don't understand projectile motion.
+              - generic [ref=e171]: Can we graph this function together?
+              - generic [ref=e172]: Show me the step-by-step derivation.
+              - generic [ref=e173]: Let's review what I missed last week.
+              - generic [ref=e174]: I don't understand projectile motion.
+              - generic [ref=e175]: Can we graph this function together?
+              - generic [ref=e176]: Show me the step-by-step derivation.
+              - generic [ref=e177]: Let's review what I missed last week.
+              - generic [ref=e178]: I don't understand projectile motion.
+              - generic [ref=e179]: Can we graph this function together?
+              - generic [ref=e180]: Show me the step-by-step derivation.
+              - generic [ref=e181]: Let's review what I missed last week.
+              - generic [ref=e182]: I don't understand projectile motion.
+              - generic [ref=e183]: Can we graph this function together?
+            - generic [ref=e184]:
+              - generic [ref=e185]: Show me the step-by-step derivation.
+              - generic [ref=e186]: Let's review what I missed last week.
+              - generic [ref=e187]: I don't understand projectile motion.
+              - generic [ref=e188]: Can we graph this function together?
+              - generic [ref=e189]: Show me the step-by-step derivation.
+              - generic [ref=e190]: Let's review what I missed last week.
+              - generic [ref=e191]: I don't understand projectile motion.
+              - generic [ref=e192]: Can we graph this function together?
+              - generic [ref=e193]: Show me the step-by-step derivation.
+              - generic [ref=e194]: Let's review what I missed last week.
+              - generic [ref=e195]: I don't understand projectile motion.
+              - generic [ref=e196]: Can we graph this function together?
+              - generic [ref=e197]: Show me the step-by-step derivation.
+              - generic [ref=e198]: Let's review what I missed last week.
+              - generic [ref=e199]: I don't understand projectile motion.
+              - generic [ref=e200]: Can we graph this function together?
+              - generic [ref=e201]: Show me the step-by-step derivation.
+              - generic [ref=e202]: Let's review what I missed last week.
+              - generic [ref=e203]: I don't understand projectile motion.
+              - generic [ref=e204]: Can we graph this function together?
+          - generic [ref=e206]:
+            - generic [ref=e207]:
+              - generic [ref=e208]: Why is the derivative positive here?
+              - generic [ref=e209]: Explain this concept like I'm 5.
+              - generic [ref=e210]: How does this connect to what we learned?
+              - generic [ref=e211]: Can you create a flashcard for this?
+              - generic [ref=e212]: Why is the derivative positive here?
+              - generic [ref=e213]: Explain this concept like I'm 5.
+              - generic [ref=e214]: How does this connect to what we learned?
+              - generic [ref=e215]: Can you create a flashcard for this?
+              - generic [ref=e216]: Why is the derivative positive here?
+              - generic [ref=e217]: Explain this concept like I'm 5.
+              - generic [ref=e218]: How does this connect to what we learned?
+              - generic [ref=e219]: Can you create a flashcard for this?
+              - generic [ref=e220]: Why is the derivative positive here?
+              - generic [ref=e221]: Explain this concept like I'm 5.
+              - generic [ref=e222]: How does this connect to what we learned?
+              - generic [ref=e223]: Can you create a flashcard for this?
+              - generic [ref=e224]: Why is the derivative positive here?
+              - generic [ref=e225]: Explain this concept like I'm 5.
+              - generic [ref=e226]: How does this connect to what we learned?
+              - generic [ref=e227]: Can you create a flashcard for this?
+            - generic [ref=e228]:
+              - generic [ref=e229]: Why is the derivative positive here?
+              - generic [ref=e230]: Explain this concept like I'm 5.
+              - generic [ref=e231]: How does this connect to what we learned?
+              - generic [ref=e232]: Can you create a flashcard for this?
+              - generic [ref=e233]: Why is the derivative positive here?
+              - generic [ref=e234]: Explain this concept like I'm 5.
+              - generic [ref=e235]: How does this connect to what we learned?
+              - generic [ref=e236]: Can you create a flashcard for this?
+              - generic [ref=e237]: Why is the derivative positive here?
+              - generic [ref=e238]: Explain this concept like I'm 5.
+              - generic [ref=e239]: How does this connect to what we learned?
+              - generic [ref=e240]: Can you create a flashcard for this?
+              - generic [ref=e241]: Why is the derivative positive here?
+              - generic [ref=e242]: Explain this concept like I'm 5.
+              - generic [ref=e243]: How does this connect to what we learned?
+              - generic [ref=e244]: Can you create a flashcard for this?
+              - generic [ref=e245]: Why is the derivative positive here?
+              - generic [ref=e246]: Explain this concept like I'm 5.
+              - generic [ref=e247]: How does this connect to what we learned?
+              - generic [ref=e248]: Can you create a flashcard for this?
+      - generic [ref=e249]:
+        - generic [ref=e250]:
+          - img [ref=e252]
+          - generic [ref=e254]:
+            - heading "Live Graphs" [level=3] [ref=e255]
+            - paragraph [ref=e256]: Plot any function, derivative, or dataset. Live, draggable graphs sit alongside the AI's notes on the canvas.
+        - generic [ref=e257]:
+          - img [ref=e259]
+          - generic [ref=e264]:
+            - heading "Flashcards" [level=3] [ref=e265]
+            - paragraph [ref=e266]: Auto-generated decks for spaced recall — built from the concepts you've already touched, not generic libraries.
+        - generic [ref=e267]:
+          - img [ref=e269]
+          - generic [ref=e287]:
+            - heading "Meeting Mode" [level=3] [ref=e288]
+            - paragraph [ref=e289]: Virtual rooms where the AI moderates voice discussions and writes corrections on the whiteboard in real time.
+        - generic [ref=e290]:
+          - img [ref=e292]:
+            - generic [ref=e294]: T
+          - generic [ref=e295]:
+            - heading "Voice & Text" [level=3] [ref=e296]
+            - paragraph [ref=e297]: Talk to your tutor or type — the AI hears both and answers on the canvas. Switch modes whenever you want.
+    - generic [ref=e300]:
+      - button "Whiteboard" [ref=e301]
+      - button "Visuals" [ref=e302]
+      - button "Collaboration" [ref=e303]
+    - generic [ref=e305]:
+      - paragraph [ref=e306]: Lives on the Whiteboard
+      - heading "Writing. Drawing. Connecting. Teaching." [level=2] [ref=e307]:
+        - text: Writing. Drawing.
+        - text: Connecting. Teaching.
+      - paragraph [ref=e308]: Every lesson shows up as handwriting, sketches, and visual maps on the canvas — never as a paragraph of chat.
+      - generic [ref=e309]:
+        - generic [ref=e310]:
+          - heading "Handwritten AI Notes" [level=3] [ref=e311]
+          - paragraph [ref=e312]: Stroke-by-stroke notes in a handwritten style — equations, arrows, and pointers, drawn the way a real tutor would at the board.
+          - img "Handwritten AI notes on derivatives" [ref=e314]
+        - generic [ref=e315]:
+          - heading "Desmos" [level=3] [ref=e316]
+          - paragraph [ref=e317]: Live, interactive Desmos graphs embedded right on the canvas. Plot functions, drag points, and explore math visually in real time.
+          - img "Desmos graph with function and tangent line" [ref=e319]
+        - generic [ref=e320]:
+          - heading "Mindmaps" [level=3] [ref=e321]
+          - paragraph [ref=e322]: Auto-generated concept maps that tie every topic you've learned into one visual web — so nothing ever feels disconnected.
+          - img "Differentiation mindmap with core concepts, applications, and techniques" [ref=e324]
+        - generic [ref=e325]:
+          - heading "Interactives" [level=3] [ref=e326]
+          - paragraph [ref=e327]: Embedded widgets, MCQs, and draggable graphs. Move the slider and watch the math respond — right on the canvas.
+          - img "Interactive parabola with roots, vertex, and axis of symmetry" [ref=e329]
+        - generic [ref=e330]:
+          - heading "Memory" [level=3] [ref=e331]
+          - paragraph [ref=e332]: A persistent knowledge graph tracks everything you've mastered, every gap, and every misconception — so the AI never forgets where you left off.
+          - img [ref=e334]
+        - generic [ref=e354]:
+          - heading "Diagrams" [level=3] [ref=e355]
+          - paragraph [ref=e356]: Visual explanations, labeled figures, and geometry drawn by the AI — always accurate, always tied to the lesson at hand.
+          - img [ref=e358]:
+            - generic [ref=e359]: a² + b² = c²
+            - generic [ref=e363]: θ
+            - generic [ref=e364]: a
+            - generic [ref=e365]: b
+            - generic [ref=e366]: c
+    - generic [ref=e371]:
+      - generic [ref=e372]:
+        - paragraph [ref=e373]: AI-Generated Explainer Videos
+        - heading "Six minutes of lesson. In three." [level=2] [ref=e374]:
+          - text: Six minutes of
+          - text: lesson.
+          - text: In three.
+        - paragraph [ref=e375]: Manim-accurate explainer videos, written by coding models and played inline on the whiteboard. Every equation and animation is mathematically exact — never AI-hallucinated.
+        - generic [ref=e376]:
+          - generic [ref=e377]: 5–6 min output
+          - generic [ref=e378]: ~3 min to render
+          - generic [ref=e379]: Manim-accurate
+      - generic [ref=e385]:
+        - generic [ref=e392]: manim_render.mp4
+        - heading "Watch the math animate itself." [level=3] [ref=e394]:
+          - text: Watch the math
+          - text: animate itself.
+        - generic [ref=e395]:
+          - img [ref=e396]:
+            - generic [ref=e397]: f(x) = x²
+            - generic [ref=e401]: vertex
+          - generic [ref=e405]: 03:00
+    - generic [ref=e407]:
+      - img [ref=e409]
+      - generic [ref=e414]:
+        - generic [ref=e418]:
+          - generic [ref=e419]:
+            - heading "AI Teaching on Whiteboard" [level=3] [ref=e420]
+            - paragraph [ref=e421]: Watch the AI write notes and draw diagrams in real time
+          - generic [ref=e422]: 1/6
+        - generic [ref=e426] [cursor=pointer]: Knowledge Graph in Action
+        - generic [ref=e430] [cursor=pointer]: Collaborative Problem Solving
+      - generic [ref=e431]:
+        - button "Previous demo" [ref=e432]:
+          - img [ref=e433]
+        - generic [ref=e435]:
+          - button "Demo 1" [ref=e436]
+          - button "Demo 2" [ref=e437]
+          - button "Demo 3" [ref=e438]
+          - button "Demo 4" [ref=e439]
+          - button "Demo 5" [ref=e440]
+          - button "Demo 6" [ref=e441]
+        - button "Next demo" [ref=e442]:
+          - img [ref=e443]
+    - generic [ref=e445]:
+      - generic [ref=e446]:
+        - heading "Think Different." [level=2] [ref=e447]
+        - heading "We Already Built It." [level=2] [ref=e448]
+      - list [ref=e449]:
+        - listitem [ref=e450]:
+          - paragraph [ref=e452]: Step 1
+          - heading "Learn" [level=3] [ref=e453]
+          - paragraph [ref=e454]: The AI writes on the digital whiteboard — notes, diagrams, and equations, stroke by stroke.
+        - listitem [ref=e455]:
+          - paragraph [ref=e457]: Step 2
+          - heading "Adapt" [level=3] [ref=e458]
+          - paragraph [ref=e459]: A persistent knowledge graph tracks everything you master, adjusting difficulty in real time.
+        - listitem [ref=e460]:
+          - paragraph [ref=e462]: Step 3
+          - heading "Execute" [level=3] [ref=e463]
+          - paragraph [ref=e464]: Take the pen and solve directly on the canvas. The AI observes and corrects you mid-step.
+        - listitem [ref=e465]:
+          - paragraph [ref=e467]: Step 4
+          - heading "Collaborate" [level=3] [ref=e468]
+          - paragraph [ref=e469]: Invite friends and solve together while the smart AI mediates the group effortlessly.
+    - generic [ref=e470]:
+      - img [ref=e472]
+      - generic [ref=e481]:
+        - heading "Assessment That Truly Understands" [level=2] [ref=e482]:
+          - text: Assessment That
+          - text: Truly Understands
+        - paragraph [ref=e483]: 100% coverage of every concept. Real-time misconception detection. Spaced repetition woven naturally into every lesson — no flashcard decks needed.
+    - generic [ref=e484]:
+      - generic [ref=e485]:
+        - heading "Loved by the learners who lead the way" [level=2] [ref=e486]:
+          - text: Loved by the
+          - text: learners who
+          - text: lead the way
+        - generic [ref=e487]:
+          - button "Previous testimonial" [ref=e488]:
+            - img [ref=e489]
+          - button "Next testimonial" [ref=e491]:
+            - img [ref=e492]
+          - generic [ref=e494]:
+            - button "Go to testimonial 1" [ref=e495]
+            - button "Go to testimonial 2" [ref=e496]
+      - generic [ref=e498]:
+        - blockquote [ref=e499]: "\"Clarifyed is like having a second brain. It learned every unique formula I derived and every niche technique I practiced. When I got stuck during a mock exam, it would instantly recall the exact method we built together to solve it. It's the ultimate competitive partner.\""
+        - generic [ref=e501]:
+          - heading "Rishi Perumal" [level=4] [ref=e502]
+          - paragraph [ref=e503]: JEE Aspirant
+    - generic [ref=e505]:
+      - generic [ref=e506]:
+        - paragraph [ref=e507]: The Minds Behind Clarifyed
+        - heading "Meet the People." [level=2] [ref=e508]
+      - generic [ref=e509]:
+        - generic [ref=e510]:
+          - img "Vyom Nishant Patel" [ref=e512]
+          - generic [ref=e514]:
+            - heading "Vyom Nishant Patel" [level=3] [ref=e515]
+            - paragraph [ref=e516]: ML Pipeline Lead & R&D Lead
+            - paragraph [ref=e517]: Architecting the AI teaching engine and knowledge graph infrastructure that powers personalized whiteboard tutoring.
+          - generic [ref=e518]:
+            - link "Vyom Nishant Patel on LinkedIn" [ref=e519] [cursor=pointer]:
+              - /url: https://linkedin.com/in/vyomie
+              - img [ref=e520]
+            - link "Vyom Nishant Patel's website" [ref=e524] [cursor=pointer]:
+              - /url: https://www.vyxm.in
+              - img [ref=e525]
+            - link "Email Vyom Nishant Patel" [ref=e528] [cursor=pointer]:
+              - /url: mailto:vyom@teenage.works
+              - img [ref=e529]
+          - paragraph [ref=e532]: "Discord: vyomnothere"
+        - generic [ref=e533]:
+          - img "Abhisar Mehta" [ref=e535]
+          - generic [ref=e537]:
+            - heading "Abhisar Mehta" [level=3] [ref=e538]
+            - paragraph [ref=e539]: ML Pipeline Engineer & Lead of Production Systems
+            - paragraph [ref=e540]: Building the production ML systems that deliver real-time AI tutoring at scale across thousands of concurrent sessions.
+          - generic [ref=e541]:
+            - link "Abhisar Mehta on LinkedIn" [ref=e542] [cursor=pointer]:
+              - /url: https://linkedin.com/in/theabmehta
+              - img [ref=e543]
+            - link "Abhisar Mehta's website" [ref=e547] [cursor=pointer]:
+              - /url: https://abmehta.com
+              - img [ref=e548]
+            - link "Email Abhisar Mehta" [ref=e551] [cursor=pointer]:
+              - /url: mailto:abhisar@teenage.works
+              - img [ref=e552]
+          - paragraph [ref=e555]: "Discord: abmehta"
+    - generic [ref=e557]:
+      - generic [ref=e558]:
+        - generic [ref=e559]:
+          - heading "Guided by industry veterans" [level=2] [ref=e560]:
+            - text: Guided by
+            - text: industry
+            - text: veterans
+          - paragraph [ref=e561]: Clarifyed is mentored by senior AI/ML leaders from one of India's largest edtech platforms — bringing deep expertise in AI, data science, and scalable learning systems to every decision we make.
+          - generic [ref=e562]:
+            - generic [ref=e563]: Mentored
+            - generic [ref=e564]:
+              - img [ref=e565]
+              - text: by the best
+        - img "Team collaboration session with mentors" [ref=e569]
+      - generic [ref=e570]:
+        - generic [ref=e571]:
+          - generic [ref=e572]:
+            - img [ref=e574]
+            - generic [ref=e577]: 10+
+          - paragraph [ref=e578]: Years of AI/ML expertise
+        - generic [ref=e579]:
+          - generic [ref=e580]:
+            - img [ref=e582]
+            - generic [ref=e585]: 50M+
+          - paragraph [ref=e586]: Learners impacted
+        - generic [ref=e587]:
+          - generic [ref=e588]:
+            - img [ref=e590]
+            - generic [ref=e593]: C-suite
+          - paragraph [ref=e594]: Leadership experience
+    - generic [ref=e595]:
+      - generic [ref=e596]:
+        - paragraph [ref=e597]: Plugs in. Levels up.
+        - heading "Works with what you already use." [level=2] [ref=e598]:
+          - text: Works with what
+          - text: you already
+          - text: use.
+        - paragraph [ref=e599]: YouTube, Desmos, lectures, textbook PDFs, notes, audio — everything you learn from, pulled onto one whiteboard.
+      - generic [ref=e602]:
+        - generic [ref=e604]:
+          - generic [ref=e605]:
+            - generic [ref=e606] [cursor=pointer]:
+              - img [ref=e607]
+              - generic [ref=e610]: Desmos
+            - generic [ref=e611] [cursor=pointer]:
+              - img [ref=e612]
+              - generic [ref=e615]: YouTube
+            - generic [ref=e616] [cursor=pointer]:
+              - img [ref=e617]
+              - generic [ref=e621]: Lectures
+            - generic [ref=e622] [cursor=pointer]:
+              - img [ref=e623]
+              - generic [ref=e626]: Desmos
+            - generic [ref=e627] [cursor=pointer]:
+              - img [ref=e628]
+              - generic [ref=e631]: YouTube
+            - generic [ref=e632] [cursor=pointer]:
+              - img [ref=e633]
+              - generic [ref=e637]: Lectures
+            - generic [ref=e638] [cursor=pointer]:
+              - img [ref=e639]
+              - generic [ref=e642]: Desmos
+            - generic [ref=e643] [cursor=pointer]:
+              - img [ref=e644]
+              - generic [ref=e647]: YouTube
+            - generic [ref=e648] [cursor=pointer]:
+              - img [ref=e649]
+              - generic [ref=e653]: Lectures
+            - generic [ref=e654] [cursor=pointer]:
+              - img [ref=e655]
+              - generic [ref=e658]: Desmos
+            - generic [ref=e659] [cursor=pointer]:
+              - img [ref=e660]
+              - generic [ref=e663]: YouTube
+            - generic [ref=e664] [cursor=pointer]:
+              - img [ref=e665]
+              - generic [ref=e669]: Lectures
+            - generic [ref=e670] [cursor=pointer]:
+              - img [ref=e671]
+              - generic [ref=e674]: Desmos
+            - generic [ref=e675] [cursor=pointer]:
+              - img [ref=e676]
+              - generic [ref=e679]: YouTube
+            - generic [ref=e680] [cursor=pointer]:
+              - img [ref=e681]
+              - generic [ref=e685]: Lectures
+          - generic [ref=e686]:
+            - generic [ref=e687] [cursor=pointer]:
+              - img [ref=e688]
+              - generic [ref=e691]: Desmos
+            - generic [ref=e692] [cursor=pointer]:
+              - img [ref=e693]
+              - generic [ref=e696]: YouTube
+            - generic [ref=e697] [cursor=pointer]:
+              - img [ref=e698]
+              - generic [ref=e702]: Lectures
+            - generic [ref=e703] [cursor=pointer]:
+              - img [ref=e704]
+              - generic [ref=e707]: Desmos
+            - generic [ref=e708] [cursor=pointer]:
+              - img [ref=e709]
+              - generic [ref=e712]: YouTube
+            - generic [ref=e713] [cursor=pointer]:
+              - img [ref=e714]
+              - generic [ref=e718]: Lectures
+            - generic [ref=e719] [cursor=pointer]:
+              - img [ref=e720]
+              - generic [ref=e723]: Desmos
+            - generic [ref=e724] [cursor=pointer]:
+              - img [ref=e725]
+              - generic [ref=e728]: YouTube
+            - generic [ref=e729] [cursor=pointer]:
+              - img [ref=e730]
+              - generic [ref=e734]: Lectures
+            - generic [ref=e735] [cursor=pointer]:
+              - img [ref=e736]
+              - generic [ref=e739]: Desmos
+            - generic [ref=e740] [cursor=pointer]:
+              - img [ref=e741]
+              - generic [ref=e744]: YouTube
+            - generic [ref=e745] [cursor=pointer]:
+              - img [ref=e746]
+              - generic [ref=e750]: Lectures
+            - generic [ref=e751] [cursor=pointer]:
+              - img [ref=e752]
+              - generic [ref=e755]: Desmos
+            - generic [ref=e756] [cursor=pointer]:
+              - img [ref=e757]
+              - generic [ref=e760]: YouTube
+            - generic [ref=e761] [cursor=pointer]:
+              - img [ref=e762]
+              - generic [ref=e766]: Lectures
+        - generic [ref=e768]:
+          - generic [ref=e769]:
+            - generic [ref=e770] [cursor=pointer]:
+              - img [ref=e771]:
+                - generic [ref=e774]: PDF
+              - generic [ref=e775]: Textbook PDFs
+            - generic [ref=e776] [cursor=pointer]:
+              - img [ref=e777]
+              - generic [ref=e781]: Notes
+            - generic [ref=e782] [cursor=pointer]:
+              - img [ref=e783]
+              - generic [ref=e785]: Audio
+            - generic [ref=e786] [cursor=pointer]:
+              - img [ref=e787]:
+                - generic [ref=e790]: PDF
+              - generic [ref=e791]: Textbook PDFs
+            - generic [ref=e792] [cursor=pointer]:
+              - img [ref=e793]
+              - generic [ref=e797]: Notes
+            - generic [ref=e798] [cursor=pointer]:
+              - img [ref=e799]
+              - generic [ref=e801]: Audio
+            - generic [ref=e802] [cursor=pointer]:
+              - img [ref=e803]:
+                - generic [ref=e806]: PDF
+              - generic [ref=e807]: Textbook PDFs
+            - generic [ref=e808] [cursor=pointer]:
+              - img [ref=e809]
+              - generic [ref=e813]: Notes
+            - generic [ref=e814] [cursor=pointer]:
+              - img [ref=e815]
+              - generic [ref=e817]: Audio
+            - generic [ref=e818] [cursor=pointer]:
+              - img [ref=e819]:
+                - generic [ref=e822]: PDF
+              - generic [ref=e823]: Textbook PDFs
+            - generic [ref=e824] [cursor=pointer]:
+              - img [ref=e825]
+              - generic [ref=e829]: Notes
+            - generic [ref=e830] [cursor=pointer]:
+              - img [ref=e831]
+              - generic [ref=e833]: Audio
+            - generic [ref=e834] [cursor=pointer]:
+              - img [ref=e835]:
+                - generic [ref=e838]: PDF
+              - generic [ref=e839]: Textbook PDFs
+            - generic [ref=e840] [cursor=pointer]:
+              - img [ref=e841]
+              - generic [ref=e845]: Notes
+            - generic [ref=e846] [cursor=pointer]:
+              - img [ref=e847]
+              - generic [ref=e849]: Audio
+          - generic [ref=e850]:
+            - generic [ref=e851] [cursor=pointer]:
+              - img [ref=e852]:
+                - generic [ref=e855]: PDF
+              - generic [ref=e856]: Textbook PDFs
+            - generic [ref=e857] [cursor=pointer]:
+              - img [ref=e858]
+              - generic [ref=e862]: Notes
+            - generic [ref=e863] [cursor=pointer]:
+              - img [ref=e864]
+              - generic [ref=e866]: Audio
+            - generic [ref=e867] [cursor=pointer]:
+              - img [ref=e868]:
+                - generic [ref=e871]: PDF
+              - generic [ref=e872]: Textbook PDFs
+            - generic [ref=e873] [cursor=pointer]:
+              - img [ref=e874]
+              - generic [ref=e878]: Notes
+            - generic [ref=e879] [cursor=pointer]:
+              - img [ref=e880]
+              - generic [ref=e882]: Audio
+            - generic [ref=e883] [cursor=pointer]:
+              - img [ref=e884]:
+                - generic [ref=e887]: PDF
+              - generic [ref=e888]: Textbook PDFs
+            - generic [ref=e889] [cursor=pointer]:
+              - img [ref=e890]
+              - generic [ref=e894]: Notes
+            - generic [ref=e895] [cursor=pointer]:
+              - img [ref=e896]
+              - generic [ref=e898]: Audio
+            - generic [ref=e899] [cursor=pointer]:
+              - img [ref=e900]:
+                - generic [ref=e903]: PDF
+              - generic [ref=e904]: Textbook PDFs
+            - generic [ref=e905] [cursor=pointer]:
+              - img [ref=e906]
+              - generic [ref=e910]: Notes
+            - generic [ref=e911] [cursor=pointer]:
+              - img [ref=e912]
+              - generic [ref=e914]: Audio
+            - generic [ref=e915] [cursor=pointer]:
+              - img [ref=e916]:
+                - generic [ref=e919]: PDF
+              - generic [ref=e920]: Textbook PDFs
+            - generic [ref=e921] [cursor=pointer]:
+              - img [ref=e922]
+              - generic [ref=e926]: Notes
+            - generic [ref=e927] [cursor=pointer]:
+              - img [ref=e928]
+              - generic [ref=e930]: Audio
+    - generic [ref=e932]:
+      - generic:
+        - img
+      - generic [ref=e933]:
+        - heading "Built to fit today. Ready for tomorrow." [level=2] [ref=e934]:
+          - text: Built to fit today.
+          - text: Ready for tomorrow.
+        - paragraph [ref=e935]: The best teacher you ever had, available anytime. Start learning on the whiteboard today.
+        - link "Get Started" [ref=e936] [cursor=pointer]:
+          - /url: https://alpha.clarifyed.ai/
+    - generic [ref=e937]:
+      - heading "Frequently Asked Questions" [level=2] [ref=e938]
+      - generic [ref=e939]:
+        - button "How is Clarifyed different from ChatGPT or Khanmigo?" [ref=e941]:
+          - generic [ref=e942]: How is Clarifyed different from ChatGPT or Khanmigo?
+          - img [ref=e943]
+        - button "What subjects does Clarifyed cover?" [ref=e946]:
+          - generic [ref=e947]: What subjects does Clarifyed cover?
+          - img [ref=e948]
+        - button "Is my child's data private and secure?" [ref=e951]:
+          - generic [ref=e952]: Is my child's data private and secure?
+          - img [ref=e953]
+        - button "Is there a free plan?" [ref=e956]:
+          - generic [ref=e957]: Is there a free plan?
+          - img [ref=e958]
+  - contentinfo [ref=e960]:
+    - generic [ref=e961]:
+      - generic [ref=e962]:
+        - generic [ref=e963]:
+          - img "Clarifyed Logo" [ref=e964]
+          - paragraph [ref=e965]:
+            - text: Whiteboard-native AI tutoring.
+            - text: Real learning, delivered stroke by stroke.
+          - generic [ref=e966]:
+            - link "Teenage Works on LinkedIn" [ref=e967] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/teenageworks?originalSubdomain=in
+              - img [ref=e968]
+            - link "Teenage Works on X" [ref=e972] [cursor=pointer]:
+              - /url: https://x.com/teenage_works
+              - img [ref=e973]
+            - link "Clarifyed on Instagram" [ref=e975] [cursor=pointer]:
+              - /url: https://instagram.com/clarifyed.ai
+              - img [ref=e976]
+            - link "Teenage Works on YouTube" [ref=e979] [cursor=pointer]:
+              - /url: https://www.youtube.com/@TeenageWorks
+              - img [ref=e980]
+        - generic [ref=e983]:
+          - generic [ref=e984]:
+            - heading "Resources" [level=4] [ref=e985]
+            - list [ref=e986]:
+              - listitem [ref=e987]:
+                - link "Blog" [ref=e988] [cursor=pointer]:
+                  - /url: "#resources"
+              - listitem [ref=e989]:
+                - link "Help Center" [ref=e990] [cursor=pointer]:
+                  - /url: "#resources"
+              - listitem [ref=e991]:
+                - link "Trust Center" [ref=e992] [cursor=pointer]:
+                  - /url: "#resources"
+          - generic [ref=e993]:
+            - heading "Company" [level=4] [ref=e994]
+            - list [ref=e995]:
+              - listitem [ref=e996]:
+                - link "About Us" [ref=e997] [cursor=pointer]:
+                  - /url: https://teenage.works/#team
+              - listitem [ref=e998]:
+                - link "Privacy Policy" [ref=e999] [cursor=pointer]:
+                  - /url: "#/privacy-policy"
+              - listitem [ref=e1000]:
+                - link "Terms" [ref=e1001] [cursor=pointer]:
+                  - /url: "#/terms"
+      - generic [ref=e1002]:
+        - generic [ref=e1003]:
+          - heading "Join the future of learning." [level=4] [ref=e1004]
+          - generic [ref=e1005]:
+            - textbox "Enter your email address" [ref=e1006]
+            - button "Subscribe" [ref=e1007]:
+              - img [ref=e1008]
+        - generic [ref=e1010]:
+          - link "A product of Teenage Works" [ref=e1011] [cursor=pointer]:
+            - /url: https://teenage.works/
+            - generic [ref=e1012]: A product of
+            - img "Teenage Works" [ref=e1013]
+          - paragraph [ref=e1014]: © 2026 Teenage Works Private Limited.
+          - paragraph [ref=e1015]: All rights reserved.

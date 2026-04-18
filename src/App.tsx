@@ -13,7 +13,6 @@ import Testimonials from './components/sections/Testimonials';
 import Team from './components/sections/Team';
 import CaseStudy from './components/sections/CaseStudy';
 import Integrations from './components/sections/Integrations';
-import Pricing from './components/sections/Pricing';
 import CTA from './components/sections/CTA';
 import VideoDemos from './components/sections/VideoDemos';
 import FAQ from './components/sections/FAQ';
@@ -101,7 +100,6 @@ export default function App() {
             <Team />
             <CaseStudy />
             <Integrations />
-            {/* <Pricing /> */}
             <CTA />
             <FAQ />
           </>

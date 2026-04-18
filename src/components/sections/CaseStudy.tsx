@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { ArrowUpRight } from 'lucide-react';
 
 export default function CaseStudy() {
   return (
@@ -34,58 +33,11 @@ export default function CaseStudy() {
             <motion.img 
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.5 }}
-              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2070&auto=format&fit=crop" alt="Team collaboration session with mentors" loading="lazy" className="w-full h-full object-cover"
+              src="/mentors.jpeg" alt="Team collaboration session with mentors" loading="lazy" className="w-full h-full object-cover"
             />
           </motion.div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            viewport={{ once: true }}
-            className="bg-white/20 backdrop-blur-sm rounded-3xl p-8 text-[#1a1a1a]"
-          >
-            <div className="flex items-center gap-4 mb-4">
-              <div className="w-10 h-10 rounded-lg bg-[#8ebf9e] flex items-center justify-center">
-                <ArrowUpRight className="w-6 h-6 text-[#1a1a1a]" />
-              </div>
-              <span className="text-5xl font-medium">10+</span>
-            </div>
-            <p className="text-lg">Years of AI/ML expertise</p>
-          </motion.div>
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="bg-white/20 backdrop-blur-sm rounded-3xl p-8 text-[#1a1a1a]"
-          >
-            <div className="flex items-center gap-4 mb-4">
-              <div className="w-10 h-10 rounded-lg bg-[#8ebf9e] flex items-center justify-center">
-                <ArrowUpRight className="w-6 h-6 text-[#1a1a1a]" />
-              </div>
-              <span className="text-5xl font-medium">50M+</span>
-            </div>
-            <p className="text-lg">Learners impacted</p>
-          </motion.div>
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            viewport={{ once: true }}
-            className="bg-white/20 backdrop-blur-sm rounded-3xl p-8 text-[#1a1a1a]"
-          >
-            <div className="flex items-center gap-4 mb-4">
-              <div className="w-10 h-10 rounded-lg bg-[#8ebf9e] flex items-center justify-center">
-                <ArrowUpRight className="w-6 h-6 text-[#1a1a1a]" />
-              </div>
-              <span className="text-5xl font-medium">C-suite</span>
-            </div>
-            <p className="text-lg">Leadership experience</p>
-          </motion.div>
-        </div>
       </div>
     </section>
   );

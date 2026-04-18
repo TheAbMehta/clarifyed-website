@@ -517,28 +517,28 @@ const cards: CardConfig[] = [
     description: "Stroke-by-stroke notes in a handwritten style — equations, arrows, and pointers, drawn the way a real tutor would at the board.",
     bg: "bg-[#6b8280]",
     shadow: "hover:shadow-[#6b8280]/20",
-    illustration: <HandwrittenIllustration />,
+    illustration: <img src="/c1.jpeg" alt="Handwritten AI notes on derivatives" className="w-full h-full object-cover rounded-2xl" loading="lazy" />,
   },
   {
-    title: "Interactives",
-    description: "Embedded Desmos widgets, MCQs, and draggable graphs. Move the slider and watch the math respond — right on the canvas.",
+    title: "Desmos",
+    description: "Live, interactive Desmos graphs embedded right on the canvas. Plot functions, drag points, and explore math visually in real time.",
     bg: "bg-[#8ebf9e]",
     shadow: "hover:shadow-[#8ebf9e]/20",
-    illustration: <InteractivesIllustration />,
+    illustration: <img src="/c2.jpeg" alt="Desmos graph with function and tangent line" className="w-full h-full object-cover rounded-2xl" loading="lazy" />,
   },
   {
     title: "Mindmaps",
     description: "Auto-generated concept maps that tie every topic you've learned into one visual web — so nothing ever feels disconnected.",
     bg: "bg-[#7a9eb1]",
     shadow: "hover:shadow-[#7a9eb1]/20",
-    illustration: <MindmapIllustration />,
+    illustration: <img src="/mindmap.png" alt="Differentiation mindmap with core concepts, applications, and techniques" className="w-full h-full object-cover object-left rounded-2xl" loading="lazy" />,
   },
   {
-    title: "Diagrams",
-    description: "Visual explanations, labeled figures, and geometry drawn by the AI — always accurate, always tied to the lesson at hand.",
+    title: "Interactives",
+    description: "Embedded widgets, MCQs, and draggable graphs. Move the slider and watch the math respond — right on the canvas.",
     bg: "bg-[#c697c9]",
     shadow: "hover:shadow-[#c697c9]/20",
-    illustration: <DiagramIllustration />,
+    illustration: <img src="/c3.jpeg" alt="Interactive parabola with roots, vertex, and axis of symmetry" className="w-full h-full object-cover rounded-2xl" loading="lazy" />,
   },
   {
     title: "Memory",
@@ -548,11 +548,11 @@ const cards: CardConfig[] = [
     illustration: <MemoryIllustration />,
   },
   {
-    title: "Desmos Graphs",
-    description: "Live, interactive Desmos graphs embedded right on the canvas. Plot functions, drag points, and explore math visually in real time.",
+    title: "Diagrams",
+    description: "Visual explanations, labeled figures, and geometry drawn by the AI — always accurate, always tied to the lesson at hand.",
     bg: "bg-[#5a8a6e]",
     shadow: "hover:shadow-[#5a8a6e]/20",
-    illustration: <DesmosGraphIllustration />,
+    illustration: <img src="/diagram-parabola.jpeg" alt="Parabola diagram showing roots, vertex, and axis of symmetry" className="w-full h-full object-cover rounded-2xl" loading="lazy" />,
   },
 ];
 
@@ -584,7 +584,7 @@ export default function Roles() {
                 {card.description}
               </p>
 
-              <div className="mt-auto pt-6 h-48 md:h-56 -mx-2 -mb-2 relative z-0">
+              <div className="mt-auto pt-6 flex-1 min-h-0 relative z-0">
                 {card.illustration}
               </div>
             </motion.div>
