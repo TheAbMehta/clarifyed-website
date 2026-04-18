@@ -29,14 +29,13 @@ const DesmosIcon = (
   </svg>
 );
 
-// Lectures — chalkboard / presentation.
+// Lectures — graduation cap.
 const LecturesIcon = (
   <svg viewBox="0 0 64 64" className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20" aria-hidden="true">
-    <rect x="8" y="10" width="48" height="32" rx="3" fill="#1f3b2d" />
-    <rect x="8" y="10" width="48" height="32" rx="3" fill="none" stroke="#e8e3d5" strokeWidth="2" />
-    <path d="M20 22 H 44 M20 28 H 38 M20 34 H 42" stroke="#e8e3d5" strokeWidth="2" strokeLinecap="round" />
-    <path d="M32 42 V 52" stroke="#1a1a1a" strokeWidth="2.5" strokeLinecap="round" />
-    <path d="M22 54 L 32 48 L 42 54" stroke="#1a1a1a" strokeWidth="2.5" strokeLinecap="round" fill="none" />
+    <path d="M32 12 L6 26 L32 40 L58 26 Z" fill="#1f3b2d" stroke="#e8e3d5" strokeWidth="1.5" />
+    <path d="M16 32 V44 Q32 54 48 44 V32" fill="none" stroke="#1f3b2d" strokeWidth="2.5" strokeLinecap="round" />
+    <path d="M54 26 V42" stroke="#1f3b2d" strokeWidth="2.5" strokeLinecap="round" />
+    <circle cx="54" cy="44" r="2.5" fill="#1f3b2d" />
   </svg>
 );
 
@@ -78,17 +77,16 @@ const NotesIcon = (
   </svg>
 );
 
-// Audio — waveform inside a circle.
+// Audio — waveform bars.
 const AudioIcon = (
   <svg viewBox="0 0 64 64" className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20" aria-hidden="true">
-    <circle cx="32" cy="32" r="26" fill="#1a1a1a" />
-    <g stroke="#8ebf9e" strokeWidth="3" strokeLinecap="round">
-      <line x1="16" y1="32" x2="16" y2="32" />
-      <line x1="22" y1="26" x2="22" y2="38" />
-      <line x1="28" y1="20" x2="28" y2="44" />
-      <line x1="34" y1="16" x2="34" y2="48" />
-      <line x1="40" y1="22" x2="40" y2="42" />
-      <line x1="46" y1="28" x2="46" y2="36" />
+    <g stroke="#1a1a1a" strokeWidth="4" strokeLinecap="round">
+      <line x1="12" y1="32" x2="12" y2="32" />
+      <line x1="20" y1="24" x2="20" y2="40" />
+      <line x1="28" y1="16" x2="28" y2="48" />
+      <line x1="36" y1="12" x2="36" y2="52" />
+      <line x1="44" y1="20" x2="44" y2="44" />
+      <line x1="52" y1="26" x2="52" y2="38" />
     </g>
   </svg>
 );

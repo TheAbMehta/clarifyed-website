@@ -101,7 +101,7 @@ export default function App() {
             <Team />
             <CaseStudy />
             <Integrations />
-            <Pricing />
+            {/* <Pricing /> */}
             <CTA />
             <FAQ />
           </>

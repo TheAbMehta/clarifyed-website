@@ -372,6 +372,137 @@ const DiagramIllustration = () => (
   </svg>
 );
 
+/**
+ * Memory
+ * A brain-like node network representing the persistent knowledge graph / spaced repetition system.
+ */
+const MemoryIllustration = () => {
+  const pulseNodes = [
+    { cx: 60, cy: 50, r: 8 },
+    { cx: 180, cy: 40, r: 10 },
+    { cx: 40, cy: 110, r: 7 },
+    { cx: 200, cy: 105, r: 9 },
+    { cx: 130, cy: 30, r: 6 },
+    { cx: 100, cy: 130, r: 8 },
+    { cx: 170, cy: 130, r: 7 },
+  ];
+
+  const connections = [
+    "M 120 80 L 60 50", "M 120 80 L 180 40", "M 120 80 L 40 110",
+    "M 120 80 L 200 105", "M 120 80 L 130 30", "M 120 80 L 100 130",
+    "M 120 80 L 170 130", "M 60 50 L 130 30", "M 180 40 L 200 105",
+    "M 40 110 L 100 130", "M 170 130 L 200 105",
+  ];
+
+  return (
+    <svg viewBox="0 0 240 160" className="w-full h-full" fill="none" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
+      {/* Connections */}
+      {connections.map((d, i) => (
+        <motion.path
+          key={i} d={d}
+          stroke="rgba(255,255,255,0.5)" strokeWidth="1.2" strokeLinecap="round"
+          initial={{ pathLength: 0 }}
+          whileInView={{ pathLength: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 + i * 0.08 }}
+        />
+      ))}
+
+      {/* Satellite nodes with pulse */}
+      {pulseNodes.map((n, i) => (
+        <motion.circle
+          key={i} cx={n.cx} cy={n.cy} r={n.r}
+          fill="rgba(255,255,255,0.35)" stroke="white" strokeWidth="1.5"
+          animate={{ r: [n.r, n.r + 1.5, n.r], opacity: [0.7, 1, 0.7] }}
+          transition={{ duration: 2.5 + i * 0.3, repeat: Infinity, ease: "easeInOut", delay: i * 0.2 }}
+        />
+      ))}
+
+      {/* Central hub — brain */}
+      <motion.circle
+        cx="120" cy="80" r="22"
+        fill="white" stroke="#1a1a1a" strokeWidth="2"
+        animate={{ r: [22, 24, 22] }}
+        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+      />
+      {/* Brain icon inside hub (Tabler) */}
+      <motion.g
+        initial={{ scale: 0 }}
+        whileInView={{ scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 1.2, ease: [0.34, 1.56, 0.64, 1] }}
+        style={{ transformOrigin: "120px 80px", transformBox: "fill-box" as any }}
+      >
+        <g transform="translate(108, 68) scale(1)" fill="none" stroke="#1a1a1a" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M15.5 13a3.5 3.5 0 0 0 -3.5 3.5v1a3.5 3.5 0 0 0 7 0v-1.8" />
+          <path d="M8.5 13a3.5 3.5 0 0 1 3.5 3.5v1a3.5 3.5 0 0 1 -7 0v-1.8" />
+          <path d="M17.5 16a3.5 3.5 0 0 0 0 -7h-.5" />
+          <path d="M19 9.3v-2.8a3.5 3.5 0 0 0 -7 0" />
+          <path d="M6.5 16a3.5 3.5 0 0 1 0 -7h.5" />
+          <path d="M5 9.3v-2.8a3.5 3.5 0 0 1 7 0v10" />
+        </g>
+      </motion.g>
+    </svg>
+  );
+};
+
+/**
+ * Desmos Graphs
+ * Embedded Desmos-style graphing calculator with multiple colored curves and axis labels.
+ */
+const DesmosGraphIllustration = () => (
+  <svg viewBox="0 0 240 160" className="w-full h-full" fill="none" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
+    {/* Panel */}
+    <rect x="16" y="8" width="208" height="144" rx="10" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.6)" strokeWidth="1.2" />
+
+    {/* Grid */}
+    {[0, 1, 2, 3, 4, 5].map((i) => (
+      <line key={`v${i}`} x1={48 + i * 32} y1="16" x2={48 + i * 32} y2="144" stroke="rgba(26,26,26,0.08)" strokeWidth="0.6" />
+    ))}
+    {[0, 1, 2, 3, 4].map((i) => (
+      <line key={`h${i}`} x1="24" y1={30 + i * 26} x2="216" y2={30 + i * 26} stroke="rgba(26,26,26,0.08)" strokeWidth="0.6" />
+    ))}
+
+    {/* Axes */}
+    <line x1="24" y1="82" x2="216" y2="82" stroke="rgba(26,26,26,0.5)" strokeWidth="1.4" />
+    <line x1="120" y1="16" x2="120" y2="144" stroke="rgba(26,26,26,0.5)" strokeWidth="1.4" />
+
+    {/* Parabola (blue) y = x² */}
+    <motion.path
+      d="M 40 140 Q 80 20 120 82 Q 160 140 200 20"
+      stroke="#2d70b3" strokeWidth="2.8" strokeLinecap="round" fill="none"
+      initial={{ pathLength: 0 }}
+      whileInView={{ pathLength: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1.2, ease: "easeOut" }}
+    />
+
+    {/* Sine wave (red) */}
+    <motion.path
+      d="M 24 82 Q 48 40 72 82 Q 96 124 120 82 Q 144 40 168 82 Q 192 124 216 82"
+      stroke="#c74440" strokeWidth="2.4" strokeLinecap="round" fill="none"
+      initial={{ pathLength: 0 }}
+      whileInView={{ pathLength: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1.4, ease: "easeOut", delay: 0.3 }}
+    />
+
+    {/* Linear (green) */}
+    <motion.path
+      d="M 24 130 L 216 34"
+      stroke="#388c46" strokeWidth="2" strokeLinecap="round"
+      initial={{ pathLength: 0 }}
+      whileInView={{ pathLength: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8, delay: 0.6 }}
+    />
+
+    {/* Axis labels */}
+    <text x="210" y="78" fill="#1a1a1a" fontSize="11" fontStyle="italic" fontFamily="'Georgia', serif" opacity="0.7">x</text>
+    <text x="124" y="22" fill="#1a1a1a" fontSize="11" fontStyle="italic" fontFamily="'Georgia', serif" opacity="0.7">y</text>
+  </svg>
+);
+
 type CardConfig = {
   title: string;
   description: string;
@@ -408,6 +539,20 @@ const cards: CardConfig[] = [
     bg: "bg-[#c697c9]",
     shadow: "hover:shadow-[#c697c9]/20",
     illustration: <DiagramIllustration />,
+  },
+  {
+    title: "Memory",
+    description: "A persistent knowledge graph tracks everything you've mastered, every gap, and every misconception — so the AI never forgets where you left off.",
+    bg: "bg-[#b07d62]",
+    shadow: "hover:shadow-[#b07d62]/20",
+    illustration: <MemoryIllustration />,
+  },
+  {
+    title: "Desmos Graphs",
+    description: "Live, interactive Desmos graphs embedded right on the canvas. Plot functions, drag points, and explore math visually in real time.",
+    bg: "bg-[#5a8a6e]",
+    shadow: "hover:shadow-[#5a8a6e]/20",
+    illustration: <DesmosGraphIllustration />,
   },
 ];
 

@@ -24,16 +24,29 @@ export default function RandomUnderline({
   strokeWidth?: number
 }) {
   const [isHovered, setIsHovered] = useState(false);
+  const [showOnLoad, setShowOnLoad] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const handleMouseEnter = () => {
-    // Exact replication of the GSAP reference: cycle globally across all items
+  // Show underline on mount after a short delay
+  React.useEffect(() => {
     if (globalNextIndex === null) {
       globalNextIndex = Math.floor(Math.random() * PATH_VARIANTS.length);
     }
     setActiveIndex(globalNextIndex);
     globalNextIndex = (globalNextIndex + 1) % PATH_VARIANTS.length;
-    
+
+    const showTimer = setTimeout(() => setShowOnLoad(true), 800);
+    const hideTimer = setTimeout(() => setShowOnLoad(false), 2200);
+    return () => { clearTimeout(showTimer); clearTimeout(hideTimer); };
+  }, []);
+
+  const handleMouseEnter = () => {
+    if (globalNextIndex === null) {
+      globalNextIndex = Math.floor(Math.random() * PATH_VARIANTS.length);
+    }
+    setActiveIndex(globalNextIndex);
+    globalNextIndex = (globalNextIndex + 1) % PATH_VARIANTS.length;
+
     setIsHovered(true);
   };
 
@@ -53,7 +66,7 @@ export default function RandomUnderline({
       
       <div className="absolute left-0 right-0 -bottom-2 h-4 pointer-events-none z-0" style={{ color: strokeColor }}>
         <AnimatePresence>
-          {isHovered && (
+          {(isHovered || showOnLoad) && (
             <svg 
               className="w-full h-full overflow-visible" 
               viewBox="0 0 310 40" 
